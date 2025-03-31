@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- Edited By POOL -->
+<!DOCTYPE POOLFILECATALOG SYSTEM "InMemory">
+<POOLFILECATALOG>
+  <File ID="0CA6926E-6140-074C-9399-C9028277F6FE">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000752.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="828EDEA0-8E9F-C848-9DA3-86A70168A4C1">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000007.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="FC3BD11F-780D-4145-9919-2B76101E857E">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000051.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="7DA46C55-CCFA-334B-ADAC-4E686063352D">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000100.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="8E540898-6C08-B240-974A-61644BE647B8">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000134.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="92B76F41-2A73-F145-8991-F9B161DDD680">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000227.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="AF0A6786-7842-794B-9948-6AE79A618056">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000297.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="975C5CBA-2E20-E840-89D2-DE0B86817AA7">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800281.Py8EG_AZ_Ztautau.recon.AOD.e8379_s3735_s3738_r13046/AOD.26811025._000347.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="0A4A1BC4-DAF7-E44F-9134-F9F2F98E773E">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000081.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="D1EC5A4A-77A3-2543-8D83-178799EFAFEA">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000098.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="2973EE2F-11C8-B44C-814E-F3F3B72F5705">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000104.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="780BC3D6-BAFA-5045-BB6E-48BF96B4F0CC">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000107.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="3DF1304C-506E-854E-9A4C-3E9610A870D7">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000132.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="103DB080-33E5-E648-B5C2-F8CF4CC7748A">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000213.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="5109B38D-6FB1-894A-90A0-29965AA79FA9">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000050.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="A30F6D7E-26EB-AD4E-BF0B-1AD44BC623B3">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000057.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="93CFCAEB-BDF3-AB47-A6C3-DE2F28CE1D82">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000059.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="8724B7AA-C947-B440-A1D2-2F4089A4F1E3">
+    <physical>
+      <pfn filetype="ROOT_All" name="/msu/data/t3work13/dcianciolo/gepOutput2/mc15_14TeV.800290.Py8EG_A14NNPDF23LO_jetjet_JZ0WithSW.recon.AOD.e8185_s3770_s3773_r13619/AOD.29278491._000063.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+</POOLFILECATALOG>

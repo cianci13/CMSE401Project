@@ -1,0 +1,74 @@
+<!-- Auto-generated file, please do not edit -->
+<Project name="WorkDir" >
+   <SubProject name="CaloInterface" >
+   </SubProject>
+   <SubProject name="xAODCaloEvent" >
+   </SubProject>
+   <SubProject name="JetRec" >
+   </SubProject>
+   <SubProject name="xAODEventInfo" >
+   </SubProject>
+   <SubProject name="xAODTruth" >
+   </SubProject>
+   <SubProject name="xAODTau" >
+   </SubProject>
+   <SubProject name="GepOutputReader" >
+      <Dependency name="CaloInterface" />
+      <Dependency name="xAODCaloEvent" />
+      <Dependency name="JetRec" />
+      <Dependency name="xAODEventInfo" />
+      <Dependency name="xAODTruth" />
+      <Dependency name="xAODTau" />
+   </SubProject>
+   <SubProject name="AthenaBaseComps" >
+   </SubProject>
+   <SubProject name="AthAnalysisBaseComps" >
+   </SubProject>
+   <SubProject name="GaudiKernel" >
+   </SubProject>
+   <SubProject name="xAODTrigL1Calo" >
+   </SubProject>
+   <SubProject name="xAODTrigCalo" >
+   </SubProject>
+   <SubProject name="xAODTrigger" >
+   </SubProject>
+   <SubProject name="xAODBase" >
+   </SubProject>
+   <SubProject name="xAODCore" >
+   </SubProject>
+   <SubProject name="xAODJet" >
+   </SubProject>
+   <SubProject name="xAODEgamma" >
+   </SubProject>
+   <SubProject name="xAODMissingET" >
+   </SubProject>
+   <SubProject name="CaloIdentifier" >
+   </SubProject>
+   <SubProject name="LArROD" >
+   </SubProject>
+   <SubProject name="InDetSLHC_Example" >
+   </SubProject>
+   <SubProject name="TrigL0GepPerf" >
+      <Dependency name="AthenaBaseComps" />
+      <Dependency name="AthAnalysisBaseComps" />
+      <Dependency name="GaudiKernel" />
+      <Dependency name="xAODEventInfo" />
+      <Dependency name="xAODTrigL1Calo" />
+      <Dependency name="xAODTrigCalo" />
+      <Dependency name="xAODCaloEvent" />
+      <Dependency name="xAODTrigger" />
+      <Dependency name="xAODBase" />
+      <Dependency name="xAODCore" />
+      <Dependency name="xAODEventInfo" />
+      <Dependency name="xAODJet" />
+      <Dependency name="xAODEgamma" />
+      <Dependency name="xAODMissingET" />
+      <Dependency name="xAODTruth" />
+      <Dependency name="CaloInterface" />
+      <Dependency name="CaloIdentifier" />
+      <Dependency name="xAODCaloEvent" />
+      <Dependency name="JetRec" />
+      <Dependency name="LArROD" />
+      <Dependency name="InDetSLHC_Example" />
+   </SubProject>
+</Project>

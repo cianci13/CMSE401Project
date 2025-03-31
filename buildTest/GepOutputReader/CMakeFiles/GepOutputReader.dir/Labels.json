@@ -1,0 +1,28 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/CaloCellsReader.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/WriteOutputHist.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/WriteOutputTree.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/components/GepOutputReader_entries.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/components/GepOutputReader_load.cxx"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"GepOutputReader"
+		],
+		"name" : "GepOutputReader"
+	}
+}

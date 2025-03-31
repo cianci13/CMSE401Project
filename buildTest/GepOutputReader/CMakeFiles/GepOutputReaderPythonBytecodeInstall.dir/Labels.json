@@ -1,0 +1,19 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/build/x86_64-slc7-gcc62-opt/python/GepOutputReader/GepOutputReaderSequence.pyc"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/build/x86_64-slc7-gcc62-opt/python/GepOutputReader/GepOutputReaderSequence.pyc.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"GepOutputReader"
+		],
+		"name" : "GepOutputReaderPythonBytecodeInstall"
+	}
+}

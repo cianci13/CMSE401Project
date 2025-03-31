@@ -1,0 +1,9 @@
+[release_metadata]
+release:1.0.0
+nightly name:Unknown
+project name:WorkDir
+nightly release:Unknown
+date:2025-02-04T1320
+compiler:GNU-6.2.0
+cxxpath:/cvmfs/sft.cern.ch/lcg/releases/gcc/6.2.0-b9934/x86_64-centos7/bin/g++
+cmake:3.11.0

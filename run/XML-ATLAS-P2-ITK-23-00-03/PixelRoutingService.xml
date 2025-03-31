@@ -1,0 +1,1064 @@
+<PixelRoutingServices>
+
+<StandardRoute>
+  <barrel>true</barrel>
+  <endcap>false</endcap>
+</StandardRoute>
+
+<!--
+Predefined routes : inner_PST, outer_IST & inner_IST  -> routing along PST or IST
+                    zMax_Layer -> vertical routing at the end of the barrel layers
+                    rLayer -> radius of the given layer
+
+Routes by position : radius=... -> radial position
+                     z=...      -> z position
+-->
+
+<!-- defines the different type of services (barrel + endcap modules) for each leayer -->
+
+<PixelBarrelSvcType>
+  <layer>0</layer>
+  <service>BarrelLayer0_cooling BarrelLayer0_cooling</service>
+</PixelBarrelSvcType>
+<PixelBarrelSvcType>
+  <layer>1</layer>
+  <service>BarrelLayer1_cooling BarrelLayer1_cooling</service>
+</PixelBarrelSvcType>
+<PixelBarrelSvcType>
+  <layer>2</layer>
+  <service>BarrelLayer2_T0 </service> 
+</PixelBarrelSvcType>
+<PixelBarrelSvcType>
+  <layer>3</layer>
+  <service>BarrelLayer3_T0 </service> 
+</PixelBarrelSvcType>
+<PixelBarrelSvcType>
+  <layer>4</layer>
+  <service>BarrelLayer4_T0_1MH </service> 
+</PixelBarrelSvcType>
+
+
+<!-- Defines the BARREL service routes -->
+<!--    EOS params are not used yet -->
+<PixelSvcRoute>
+  <layer>0 1</layer>
+  <type>barrel_T0</type>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting>
+  <service_L0> BarrelLayer0_T0 BarrelLayer0_T0 </service_L0>
+  <service_L1> BarrelLayer1_T0 BarrelLayer1_T0 </service_L1> 
+  <EOScard> EOS_pixel_layer </EOScard>
+  <EOSsvclength> 1. </EOSsvclength> 
+  <r> outer_QuarterShell outer_QuarterShell </r>
+  <z> 0 zMax_AllLayer </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer>0 1</layer>
+  <type>barrel_T1</type>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting>
+  <service_L0> BarrelLayer0_T1 BarrelLayer0_T1 </service_L0>
+  <service_L1> BarrelLayer1_T1 BarrelLayer1_T1 </service_L1>
+  <EOScard> EOS_pixel_layer </EOScard>
+  <EOSsvclength> 1. </EOSsvclength>
+  <r> outer_QuarterShell outer_QuarterShell </r>
+  <z> zMax_AllLayer zMax_IST </z>
+</PixelSvcRoute>
+
+<!-- outer barrel  flat section -->
+
+<PixelSvcRoute>
+  <layer>2 3 4 </layer>
+  <type>barrel_T1</type>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting>
+  <service_L2> BarrelLayer2_T1_Cooling </service_L2>
+  <service_L3> BarrelLayer3_T1_Cooling </service_L3>
+  <service_L4> BarrelLayer4_T1_1MH_Cooling  </service_L4>
+  <EOScard> EOS_pixel_layer </EOScard>
+  <EOSsvclength> 1. </EOSsvclength>  
+  <r> r_Layer+43.      r_Layer+43.           inner_PST              inner_PST   </r>
+  <z> zMax_AllLayer+12.   zMax_PST-1934.   zMax_PST-1934.    zMax_PST  </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 2 </layer>
+  <type>barrel_PP0</type>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting>
+  <service_L2> PP0_OB_L2_flat  </service_L2>
+  <EOScard> EOS_pixel_layer </EOScard>
+  <EOSsvclength> 1. </EOSsvclength>  
+  <r> r_Layer+55.      r_Layer+55.         </r>
+  <z> zMax_AllLayer-360.   zMax_AllLayer+10  </z>
+</PixelSvcRoute> 
+ 
+<PixelSvcRoute>
+  <layer> 3  </layer>
+  <type>barrel_PP0</type>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting>
+  <service_L3> PP0_OB_L3_flat  </service_L3>
+  <EOScard> EOS_pixel_layer </EOScard>
+  <EOSsvclength> 1. </EOSsvclength>  
+  <r> r_Layer+47.      r_Layer+47.         </r>
+  <z> zMax_AllLayer-360.   zMax_AllLayer+10  </z>
+</PixelSvcRoute> 
+ 
+<PixelSvcRoute>
+  <layer> 4 </layer>
+  <type>barrel_PP0</type>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting>
+  <service_L4> PP0_OB_L4_flat  </service_L4> 
+  <EOScard> EOS_pixel_layer </EOScard>
+  <EOSsvclength> 1. </EOSsvclength>
+  <r> r_Layer+44.      r_Layer+44.         </r>
+  <z> zMax_AllLayer-360.   zMax_AllLayer+10  </z>
+</PixelSvcRoute> 
+
+<!-- Defines the ECRing service routes -->
+<!--    From innermost to outermost ring layer -->
+<!--    EOS params are not used yet -->
+
+<PixelSvcRoute>
+  <layer> 0 2 4 6 10 13 18 22 27 30 35 39 44 46 52 </layer>
+  <type>endcap_T0TwdBS</type>
+  <service> CoupledRings_InnerSingles_T0 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting>
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMin_Disc_0+2 rMin_Disc_0+22 </r>
+  <z> z_Disc-8 z_Disc-8 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 0 2 4 6 10 13 18 22 27 30 35 39 44 46 52 </layer>
+  <type>endcap_T0AwayBS</type>
+  <service> CoupledRings_InnerSingles_T0 </service>
+  <thickness> .5 </thickness>
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMin_Disc_0+2 rMin_Disc_0+22 </r>
+  <z> z_Disc z_Disc </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 0 2 4 6 10 13 18 22 27 30 35 39 44 46 52 </layer>
+  <type>endcap_T1</type>
+  <service> CoupledRings_InnerSingles_T1 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> outer_QuarterShell+2 outer_QuarterShell+2 </r>
+  <z> z_Disc-8 zMax_PST</z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 1 3 5 7 11 14 19 23 28 31 36 40 45 47 53 </layer>
+  <type>endcap_T0TwdBS</type>
+  <service> CoupledRings_InnerQuads_T0 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> inner_QuarterShell-45 inner_QuarterShell </r>
+  <z> z_Disc-8 z_Disc-8 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 1 3 5 7 11 14 19 23 28 31 36 40 45 47 53 </layer>
+  <type>endcap_T0AwayBS</type>
+  <service> CoupledRings_InnerQuads_T0 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> inner_QuarterShell-45 inner_QuarterShell </r>
+  <z> z_Disc z_Disc </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 59 64 69 74 78 82 86 91 </layer>
+  <type>endcap_T0TwdBS</type>
+  <service> CoupledRings_OuterQuads_T0 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> inner_QuarterShell-45 inner_QuarterShell </r>
+  <z> z_Disc-8 z_Disc-8 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 59 64 69 74 78 82 86 91 </layer>
+  <type>endcap_T0AwayBS</type>
+  <service> CoupledRings_OuterQuads_T0 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> inner_QuarterShell-45 inner_QuarterShell </r>
+  <z> z_Disc z_Disc </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 1 3 5 7 11 14 19 23 28 31 36 40 45 47 53 59 64 69 74 78 82 86 91  </layer>
+  <type>endcap_T1</type>
+  <service> CoupledRings_Quads_T1 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> outer_QuarterShell+3 outer_QuarterShell+3 </r>
+  <z> z_Disc-8 zMax_PST</z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 51 57 62 68 72 77</layer>
+  <type>endcap_T0TwdBS</type>
+  <service> CoupledRings_OuterSingles_T0 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> inner_QuarterShell-65. inner_QuarterShell-42. </r>
+  <z> z_Disc-8 z_Disc-8 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 51 57 62 68 72 77 </layer>
+  <type>endcap_T0AwayBS</type>
+  <service> CoupledRings_OuterSingles_T0 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> inner_QuarterShell-65. inner_QuarterShell-42. </r>
+  <z> z_Disc z_Disc </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 51 57 62 68 72 77 </layer>
+  <type>endcap_T1</type>
+  <service> CoupledRings_OuterSingles_T1 </service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting> 
+  <zgap> 0.</zgap>
+  <rgap> 0. </rgap>
+  <r> outer_QuarterShell+4 outer_QuarterShell+4 </r>
+  <z> z_Disc-8 zMax_PST</z>
+</PixelSvcRoute>
+
+<!-- inclined rings L2 : PP0 + sectors towards end of inclined section + routing towards PP1 -->
+
+<PixelSvcRoute>
+  <layer>  12 17 25 33 41 50</layer>
+  <type>endcap_PP0</type>
+  <service> PP0_OB_L2_inclined </service>
+  <thickness> .5 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_12+2  rMax_Disc_12+2   </r>
+  <z> z_Disc     z_Disc+30  </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 12 17 25 33 41 50 </layer>
+  <type>endcap</type>
+  <service>InclinedLayer_2</service>
+  <thickness> .4 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_12+5  rMax_Disc_12+5  338   338 </r>
+  <z> z_Disc+20.      zMax_PST-1939       zMax_PST-1939     zMax_PST   </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 12  </layer>
+  <type>endcap_cooling</type>
+  <service>InclinedLayer_2_cooling</service>
+  <thickness> .4 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_12+4  rMax_Disc_12+4  337.5    337.5 </r>
+  <z> z_Disc+20.      zMax_PST-1940       zMax_PST-1940     zMax_PST   </z>
+</PixelSvcRoute>
+
+<!-- inclined rings L3 : PP0 + sectors towards end of inclined section + routing towards PP1 -->
+
+<PixelSvcRoute>
+  <layer> 9 16 21 26 32 37 42 49 </layer>
+  <type>endcap_PP0</type>
+  <service> PP0_OB_L3_inclined </service>
+  <thickness> .5 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_9+2  rMax_Disc_9+2   </r>
+  <z> z_Disc     z_Disc+30  </z>
+ </PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 9 16 21 26 32 37 42 49  </layer>
+  <type>endcap</type>
+  <service>InclinedLayer_3</service>
+  <thickness> .4 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_9+5  rMax_Disc_9+5  339       339 </r>
+  <z> z_Disc+20.         zMax_PST-1937  zMax_PST-1937   zMax_PST </z>
+ </PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 9  </layer>
+  <type>endcap_cooling</type>
+  <service>InclinedLayer_3_cooling</service>
+  <thickness> .4 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_9+4  rMax_Disc_9+4   338.5     338.5  </r>
+  <z> z_Disc+20.         zMax_PST-1938  zMax_PST-1938   zMax_PST </z>
+ </PixelSvcRoute>
+
+<!-- inclined section L4-->
+
+<PixelSvcRoute>
+  <layer> 8 15 20 24 29 34 38 43 48 </layer>
+  <type>endcap_PP0</type>
+  <service> PP0_OB_L4_inclined </service> 
+  <thickness> .5 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_8+2  rMax_Disc_8+2   </r>
+  <z> z_Disc     z_Disc+30  </z>
+ </PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 8 15 20 24 29 34 38 43 48 </layer>
+  <type>endcap</type>
+  <service>InclinedLayer_4_1MH </service>
+  <thickness> .4 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_8+5  rMax_Disc_8+5  340      340 </r>
+  <z> z_Disc+20.         zMax_PST-1935  zMax_PST-1935  zMax_PST </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 8  </layer>
+  <type>endcap_cooling</type>
+  <service>InclinedLayer_4_cooling </service>
+  <thickness> .4 </thickness> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_8+4  rMax_Disc_8+4  339.5      339.5 </r>
+  <z> z_Disc+20.         zMax_PST-1936  zMax_PST-1936  zMax_PST </z>
+</PixelSvcRoute>
+
+<!-- endcap rings L1 : routing towards PP1 -->
+
+<PixelSvcRoute>
+  <layer> 54 58 63 67 71  </layer>
+  <type>endcap_T0TwdBS</type>
+  <service>EC_D1_T0_1MH</service>
+  <thickness> .5 </thickness>
+  <isPhiRouting> 1 </isPhiRouting>  
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMin_Disc_54+2. rMax_Disc_54+3 </r>
+  <z> z_Disc-5 z_Disc-5 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer>   75 80 83 87 90 92 </layer>
+  <type>endcap_T0TwdBS</type>
+  <service>EC_D1_T0</service>
+  <thickness> .5 </thickness>
+  <isPhiRouting> 1 </isPhiRouting>  
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMin_Disc_54+2. rMax_Disc_54+3 </r>
+  <z> z_Disc-5 z_Disc-5 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 55 61 66 73 79 84 88 93 </layer>
+  <type>endcap_T0TwdBS</type>
+  <service>EC_D2_T0_1MH</service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMin_Disc_55+2. rMax_Disc_55+3 </r>
+  <z> z_Disc-5 z_Disc-5</z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 56 60 65 70 76 81 85 </layer>
+  <type>endcap_T0TwdBS</type>
+  <service>EC_D3_T0_1MH</service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMin_Disc_56+2. rMax_Disc_56+3 </r>
+  <z> z_Disc-5 z_Disc-5 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer>  89 94 </layer>
+  <type>endcap_T0TwdBS</type>
+  <service>EC_D3_T0</service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 1 </isPhiRouting> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMin_Disc_56+2. rMax_Disc_56+3 </r>
+  <z> z_Disc-5 z_Disc-5 </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer>  54 58 63 67 71   </layer>
+  <type>endcap_T1</type>
+  <service>EC_D1_T1_1MH</service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_54+3 rMax_Disc_54+3 </r>
+  <z> z_Disc-5 zMax_PST </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer>  75 80 83 87 90 92  </layer>
+  <type>endcap_T1</type>
+  <service>EC_D1_T1</service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_54+2 rMax_Disc_54+2 </r>
+  <z> z_Disc-5 zMax_PST </z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 55 61 66 73 79 84 88 93 </layer>
+  <type>endcap_T1</type>
+  <service>EC_D2_T1_1MH</service>
+  <thickness> .5 </thickness>
+  <isPhiRouting> 0 </isPhiRouting>  
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_55+3 rMax_Disc_55+3</r>
+  <z> z_Disc-5 zMax_PST</z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 56 60 65 70 76 81 85   </layer>
+  <type>endcap_T1</type>
+  <service>EC_D3_T1_1MH</service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_56+3 rMax_Disc_56+3</r>
+  <z> z_Disc-5 zMax_PST</z>
+</PixelSvcRoute>
+
+<PixelSvcRoute>
+  <layer> 89 94  </layer>
+  <type>endcap_T1</type>
+  <service>EC_D3_T1</service>
+  <thickness> .5 </thickness> 
+  <isPhiRouting> 0 </isPhiRouting> 
+  <zgap> 3.</zgap>
+  <rgap> 0. </rgap>
+  <r> rMax_Disc_56+2 rMax_Disc_56+2</r>
+  <z> z_Disc-5 zMax_PST</z>
+</PixelSvcRoute>
+
+<PixelBarrelEOScard>
+<name> EOS_pixel_layer</name>
+<length> 10.</length>
+<halfThick> 3.</halfThick>
+<EosTolerance> .1</EosTolerance>
+<LayerLengthTolerance> 1 </LayerLengthTolerance>
+</PixelBarrelEOScard>
+
+<!-- Describe the different cable & cooling service for a set of services -->
+<ServiceSet>
+  <name>BarrelLayer0_cooling</name>
+  <Cooling>  TiCO2  *1_stave   lin 1.525 1.8 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer1_cooling</name>
+  <Cooling>  TiCO2  *1_stave   lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer0_T0</name>
+  <Service>  data   *4_module   lin std::Copper  0.00009  pix::Polyimide  0.00006  Cu  </Service> <!-- TP40 -->
+  <Service>  CMDCLK /3_module   lin std::Copper  0.00009  pix::Polyimide  0.00006  Cu  </Service> <!-- TP40 -->
+  <Service>  HV     /3_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /12_module  lin std::Copper  0.00461  pix::Polyimide  0.00028  Cu  </Service> <!-- TP23 -->
+  <Service>  LPM    /12_module  lin std::Copper  0.00011  pix::Polyimide  0.00004  Cu  </Service> <!-- TP36 -->								 
+  <Service>  Tilock /12_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer0_T1</name>
+  <Service>  data   *4_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /3_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /3_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /12_module  lin std::Copper  0.02341  pix::Polyimide  0.00060  Cu  </Service> <!-- TP16 -->								 
+  <Service>  VCAN   /24_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /12_module  lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  LPM    /12_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  Tilock /12_module  lin std::Copper  0.00091  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 -->								 
+  <Cooling>  TiCO2  *1_stave   lin 1.525 1.8 pix::CoolingFluid std::Titanium</Cooling>
+ </ServiceSet>
+
+<ServiceSet> 
+ <name>BarrelLayer1_T0</name>
+  <Service>  data   *2_module   lin std::Copper  0.00009  pix::Polyimide  0.00006  Cu  </Service> <!-- TP40 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.00009  pix::Polyimide  0.00006  Cu  </Service> <!-- TP40 -->
+  <Service>  HV     /3_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /6_module   lin std::Copper  0.00367  pix::Polyimide  0.00025  Cu  </Service> <!-- TP24 -->
+  <Service>  LPM    /6_module   lin std::Copper  0.00011  pix::Polyimide  0.00004  Cu  </Service> <!-- TP36 -->								 
+  <Service>  Tilock /6_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer1_T1</name> 
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /3_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /6_module   lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /20_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /6_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  LPM    /6_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  Tilock /6_module   lin std::Copper  0.00091  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 -->								 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer2_T0</name>  <!-- direct transmission, T1-like, T0 to be simulated via pigtails+PP0-->
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer2_T1</name> 
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer2_T1_Cooling</name> 
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+  <Cooling>  TiCO2  *1_stave  lin 2.03 2.572 pix::CoolingFluid std::Titanium</Cooling>  
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer3_T0</name> <!-- direct transmission, T1-like, T0 to be simulated via pigtails-+PP0-->
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ </ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer3_T1</name> 
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ </ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer3_T1_Cooling</name> 
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+  <Cooling>  TiCO2  *1_stave  lin 2.03 2.572 pix::CoolingFluid std::Titanium</Cooling>  
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer4_T0</name> <!-- direct transmission, T1-like, T0 to be simulated via pigtails+PP0-->
+ <Service>  data   *4_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ </ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer4_T0_1MH</name> <!-- direct transmission, T1-like, T0 to be simulated via pigtails+PP0-->
+ <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ </ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer4_T1</name> 
+  <Service>  data   *4_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ </ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer4_T1_Cooling</name> 
+  <Service>  data   *4_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling> 
+</ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer4_T1_1MH</name> 
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ </ServiceSet>
+
+<ServiceSet>
+  <name>BarrelLayer4_T1_1MH_Cooling </name> 
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /9_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /9_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_shielded-->
+  <Service>  Tilock /9_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+  <Cooling>  TiCO2  *1_stave  lin 2.03 2.572 pix::CoolingFluid std::Titanium</Cooling> 
+</ServiceSet>
+
+<ServiceSet>
+  <name>CoupledRings_InnerSingles_T0</name>
+  <Cooling>  TiCO2  *1_stave   lin 1.525 1.8 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>CoupledRings_InnerSingles_T1</name>
+  <Service>  data   *3_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /3_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /3_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /9_module   lin std::Copper  0.02341  pix::Polyimide  0.00060  Cu  </Service> <!-- TP16 -->								 
+  <Service>  VCAN   /18_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /9_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  LPM    /9_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  Tilock /9_module   lin std::Copper  0.00091  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 -->								 
+  <Cooling>  TiCO2  *1_stave   lin 1.525 1.8 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>CoupledRings_InnerQuads_T0</name>
+  <Service>  flex   *2_module   lin std::Copper  0.00195  std::Kapton  0.000644  pix::FR4 0.00185 Cu  </Service> <!-- ring flex -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>CoupledRings_OuterQuads_T0</name>
+  <Service>  flex   *1_module   lin std::Copper  0.00195  std::Kapton  0.000644  pix::FR4 0.00185  Cu  </Service> <!-- ring flex -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>CoupledRings_Quads_T1</name>
+  <Service>  data   *4_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /5_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /10_module  lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /20_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /10_module  lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  LPM    /10_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  Tilock /10_module  lin std::Copper  0.00091  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 -->								 
+  <Cooling>  TiCO2  *1_stave    lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>CoupledRings_OuterSingles_T0</name>
+  <Service>  flex   *1_module   lin std::Copper  0.00188  std::Kapton  0.000622  pix::FR4 0.00179  Cu  </Service> <!-- ring flex -->
+  <Cooling>  TiCO2  *1_stave   lin 1.525 1.8 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>CoupledRings_OuterSingles_T1</name>
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /3_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /3_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /15_module  lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /15_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /15_module  lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  LPM    /15_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  Tilock /15_module  lin std::Copper  0.00091  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 -->								 
+  <Cooling>  TiCO2  *1_stave   lin 1.525 1.8 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<!-- PP0 estimate Aug'20 : PP0 + pigtail outside module 
+
+     PCB section   16.3g / 6 modules
+     Wing section  0.16g / 1 module
+     Connector section 0.777g / 1 module
+     Module connector  0.244g / 1 module
+     Type1 power connector 1.524g / 9 modules
+     Type1 data connector 1.575g /3 modules (L2) or 6 modules (L3,L4)
+     Pigtail common section  0.823g /1 module
+     Pigtail Zray section    1.002g /1 module    
+     MOPS                    2g / 9 modules 
+--> 
+ 
+<!--  scaled for 360mm length -->
+<ServiceSet>  
+  <name> PP0_OB_L2_flat </name>
+  <Service> PCB *1_module lin pix::PP0_Longeron_PCBSection_Material 0.00755 PCB </Service> 
+  <Service> Wing *1_module lin pix::PP0_Longeron_WingSection_Material 0.00044 Wing </Service> 
+  <Service> CSection *1_module lin pix::PP0_Longeron_ConnectorSection_Material 0.00216 CSection </Service> 
+  <Service> PigtailCommon *1_module lin pix::Pigtail_CommonSection_Material 0.00229 PigtailCommon </Service> 
+  <Service> PigtailZray *1_module lin pix::Pigtail_Z-RayConnectorSection_Material 0.00278 PigtailZraySection </Service> 
+  <Service> ModuleConnector *1_module lin pix::PP0_ModuleConnector_Material 0.00068 ModuleConnector </Service> 
+  <Service> DataConnector /3_module lin pix::PP0_Data1Connector_Material 0.00438 DataConnector </Service> 
+  <Service> PowerConnector /9_module lin pix::PP0_Type1Connector_Material 0.00423 PowerConnector </Service> 
+  <Service> MOPS /9_module lin pix::Mix 0.00556 MOPS </Service> 
+</ServiceSet>
+
+<ServiceSet>  
+  <name> PP0_OB_L3_flat </name>
+  <Service> PCB *1_module lin pix::PP0_Longeron_PCBSection_Material 0.00755 PCB </Service> 
+  <Service> Wing *1_module lin pix::PP0_Longeron_WingSection_Material 0.00044 Wing </Service> 
+  <Service> CSection *1_module lin pix::PP0_Longeron_ConnectorSection_Material 0.00216 CSection </Service> 
+  <Service> PigtailCommon *1_module lin pix::Pigtail_CommonSection_Material 0.00229 PigtailCommon </Service> 
+  <Service> PigtailZray *1_module lin pix::Pigtail_Z-RayConnectorSection_Material 0.00278 PigtailZraySection </Service> 
+  <Service> ModuleConnector *1_module lin pix::PP0_ModuleConnector_Material 0.00068 ModuleConnector </Service> 
+  <Service> DataConnector /6_module lin pix::PP0_Data1Connector_Material 0.00438 DataConnector </Service> 
+  <Service> PowerConnector /9_module lin pix::PP0_Type1Connector_Material 0.00423 PowerConnector </Service> 
+  <Service> MOPS /9_module lin pix::Mix 0.00556 MOPS </Service> 
+</ServiceSet>
+
+<ServiceSet>  
+  <name> PP0_OB_L4_flat </name>
+  <Service> PCB *1_module lin pix::PP0_Longeron_PCBSection_Material 0.00755 PCB </Service> 
+  <Service> Wing *1_module lin pix::PP0_Longeron_WingSection_Material 0.00044 Wing </Service> 
+  <Service> CSection *1_module lin pix::PP0_Longeron_ConnectorSection_Material 0.00216 CSection </Service> 
+  <Service> PigtailCommon *1_module lin pix::Pigtail_CommonSection_Material 0.00229 PigtailCommon </Service> 
+  <Service> PigtailZray *1_module lin pix::Pigtail_Z-RayConnectorSection_Material 0.00278 PigtailZraySection </Service> 
+  <Service> ModuleConnector *1_module lin pix::PP0_ModuleConnector_Material 0.00068 ModuleConnector </Service> 
+  <Service> DataConnector /6_module lin pix::PP0_Data1Connector_Material 0.00438 DataConnector </Service> 
+  <Service> PowerConnector /9_module lin pix::PP0_Type1Connector_Material 0.00423 PowerConnector </Service> 
+  <Service> MOPS /9_module lin pix::Mix 0.00556 MOPS </Service> 
+</ServiceSet>
+
+<!--  PP0 inclined section + pigtails outside module   estimate Aug'20
+weights: PCB section   2.39g / 1 module
+                Flex section  0.165g / 1 module
+                Module connector  0.244g / 1 module
+                Type1 power connector 1.524g / 8-11-14 modules  (L2-L3-L4)
+                Type1 data connector 1.575g  1/4 modules (L2), 2/11 modules (L3),  3/14 modules (L4)
+                Pigtail common section  0.823g /1 module
+                Pigtail Zray section    1.002g /1 module    
+                Handling Inserts        0.172g / 8-11-14 modules (L2-L3-L4)       
+                MOPS                    2g / 8-11-14 modules (L2-L3-L4) 
+-->
+
+<ServiceSet>  <!-- scaled for 30mm length -->
+  <name> PP0_OB_L2_inclined </name>
+  <Service> PCB *1_module lin pix::PP0_Inclined_PCBSection_Material 0.08 PCB </Service> 
+  <Service> Flex *1_module lin pix::PP0_Inclined_FlexSection_Material 0.0055 Flex </Service> 
+  <Service> PigtailCommon *1_module lin pix::Pigtail_CommonSection_Material 0.0274 PigtailCommon </Service> 
+  <Service> PigtailZray *1_module lin pix::Pigtail_Z-RayConnectorSection_Material 0.033 PigtailZraySection </Service> 
+  <Service> ModuleConnector *1_module lin pix::PP0_ModuleConnector_Material 0.0081 ModuleConnector </Service> 
+  <Service> DataConnector /4_module lin pix::PP0_Data1Connector_Material 0.0525 DataConnector </Service> 
+  <Service> PowerConnector /8_module lin pix::PP0_Type1Connector_Material 0.0508 PowerConnector </Service> 
+  <Service> Inserts /8_module lin pix::HandlingInserts_Material 0.0057 Inserts </Service> 
+  <Service> MOPS /8_module lin pix::Mix 0.0667 MOPS </Service> 
+</ServiceSet>
+
+<ServiceSet>  <!-- scaled for 30mm length -->
+   <name> PP0_OB_L3_inclined</name>
+  <Service> PCB *1_module lin pix::PP0_Inclined_PCBSection_Material 0.08 PCB </Service> 
+  <Service> Flex *1_module lin pix::PP0_Inclined_FlexSection_Material 0.0055 Flex </Service> 
+  <Service> PigtailCommon *1_module lin pix::Pigtail_CommonSection_Material 0.0274 PigtailCommon </Service> 
+  <Service> PigtailZray *1_module lin pix::Pigtail_Z-RayConnectorSection_Material 0.033 PigtailZray </Service> 
+  <Service> ModuleConnector *1_module lin pix::PP0_ModuleConnector_Material 0.0081 ModuleConnector </Service> 
+  <Service> DataConnector /11_module lin pix::PP0_Data1Connector_Material 0.105 DataConnector </Service> 
+  <Service> PowerConnector /11_module lin pix::PP0_Type1Connector_Material 0.0508 PowerConnector </Service> 
+  <Service> Inserts /11_module lin pix::HandlingInserts_Material 0.0057 Inserts </Service> 
+  <Service> MOPS /11_module lin pix::Mix 0.0667 MOPS </Service> 
+</ServiceSet>
+
+<ServiceSet>  <!-- scaled for 30mm length -->
+  <name> PP0_OB_L4_inclined</name>
+  <Service> PCB *1_module lin pix::PP0_Inclined_PCBSection_Material 0.08 PCB </Service> 
+  <Service> Flex *1_module lin pix::PP0_Inclined_FlexSection_Material 0.0055 Flex </Service> 
+  <Service> PigtailCommon *1_module lin pix::Pigtail_CommonSection_Material 0.0274 PigtailCommon </Service> 
+  <Service> PigtailZray *1_module lin pix::Pigtail_Z-RayConnectorSection_Material 0.033 PigtailZray </Service> 
+  <Service> ModuleConnector *1_module lin pix::PP0_ModuleConnector_Material 0.0081 ModuleConnector </Service> 
+  <Service> DataConnector /14_module lin pix::PP0_Data1Connector_Material 0.1575 DataConnector </Service> 
+  <Service> PowerConnector /14_module lin pix::PP0_Type1Connector_Material 0.0508 PowerConnector </Service> 
+  <Service> Inserts /14_module lin pix::HandlingInserts_Material 0.0057 Inserts </Service> 
+  <Service> MOPS /14_module lin pix::Mix 0.0667 MOPS </Service> 
+</ServiceSet>
+
+<ServiceSet>
+  <name>InclinedLayer_2</name>
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /8_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /8_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /8_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /8_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /8_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded-->
+  <Service>  Tilock /8_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ <!--<Cooling>  TiCO2  /8_module  lin 1.914 2.425 pix::CoolingFluid std::Titanium</Cooling>-->  
+</ServiceSet>
+
+<ServiceSet>
+  <name>InclinedLayer_2_cooling</name>
+  <Cooling>  TiCO2  *1_module  lin 2.103 2.445 pix::CoolingFluid std::Titanium</Cooling>  
+</ServiceSet>
+
+<ServiceSet>
+  <name>InclinedLayer_3</name>
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /11_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /11_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /11_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /11_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /11_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded-->
+  <Service>  Tilock /11_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+  <!--<Cooling>  TiCO2  /11_module  lin 2.244 2.843 pix::CoolingFluid std::Titanium</Cooling> --> 
+</ServiceSet>
+
+<ServiceSet>
+  <name>InclinedLayer_3_cooling</name>
+  <Cooling>  TiCO2  *1_module  lin 1.812 2.125 pix::CoolingFluid std::Titanium</Cooling>  
+</ServiceSet>
+
+<ServiceSet>
+  <name>InclinedLayer_4</name>
+  <Service>  data   *4_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /14_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /14_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /14_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /14_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /14_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded-->
+  <Service>  Tilock /14_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ <Cooling>  TiCO2  /14_module  lin 2.532 3.208 pix::CoolingFluid std::Titanium</Cooling>  
+ </ServiceSet>
+
+<ServiceSet>
+  <name>InclinedLayer_4_1MH</name>
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->			  
+  <Service>  HV     /14_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /14_module   lin std::Copper  0.0147  pix::Polyimide  0.00024  Cu  </Service> <!-- TP18 --> 
+  <Service>  VCAN   /14_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  LPM   /14_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 --> 
+  <Service>  CANBus /14_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded-->
+  <Service>  Tilock /14_module   lin std::Copper  0.00092  pix::Polyimide  0.00014  Cu  </Service> <!-- TP30 --> 
+ <!--<Cooling>  TiCO2  /14_module  lin 2.532 3.208 pix::CoolingFluid std::Titanium</Cooling> --> 
+</ServiceSet>
+
+<ServiceSet>
+  <name>InclinedLayer_4_cooling</name>
+ <Cooling>  TiCO2  *1_module  lin 1.606 1.894 pix::CoolingFluid std::Titanium</Cooling>  
+</ServiceSet>
+
+
+<!-- Endcap disks -->>
+<ServiceSet>
+  <name>EC_D1_T0</name>
+  <Service>  data   *4_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  CMDCLK /1_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  HV     /4_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /8_module   lin std::Copper  0.00734  pix::Polyimide  0.00034  Cu  </Service> <!-- TP21 -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D1_T0_1MH</name>
+  <Service>  data   *2_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  CMDCLK /1_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  HV     /4_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /8_module   lin std::Copper  0.00734  pix::Polyimide  0.00034  Cu  </Service> <!-- TP21 -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D2_T0</name>
+  <Service>  data   *8_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  CMDCLK /1_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  HV     /6_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /11_module  lin std::Copper  0.00734  pix::Polyimide  0.00034  Cu  </Service> <!-- TP21 -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D2_T0_1MH</name>
+  <Service>  data   *2_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  CMDCLK /1_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  HV     /6_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /11_module  lin std::Copper  0.00734  pix::Polyimide  0.00034  Cu  </Service> <!-- TP21 -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D3_T0</name>
+  <Service>  data   *2_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  CMDCLK /1_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  HV     /8_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /13_module  lin std::Copper  0.00734  pix::Polyimide  0.00034  Cu  </Service> <!-- TP21 -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D3_T0_1MH</name>
+  <Service>  data   *1_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  CMDCLK /1_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->				      
+  <Service>  HV     /8_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->
+  <Service>  LV     /13_module  lin std::Copper  0.00734  pix::Polyimide  0.00034  Cu  </Service> <!-- TP21 -->
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D1_T1</name>
+  <Service>  data   *4_module  lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /4_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /8_module   lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /8_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /8_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  Tilock /8_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D1_T1_1MH</name>
+  <Service>  data   *2_module  lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV     /4_module   lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /8_module   lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /8_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /8_module   lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  Tilock /8_module   lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D2_T1</name>
+  <Service>  data   *8_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV1    /11_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  HV2    /11_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /11_module  lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /11_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /11_module  lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  Tilock /11_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D2_T1_1MH</name>
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV1    /11_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  HV2    /11_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /11_module  lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /11_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /11_module  lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  Tilock /11_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D3_T1</name>
+  <Service>  data   *2_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV1    /13_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  HV2    /13_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /13_module  lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /13_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /13_module  lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  Tilock /13_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+<ServiceSet>
+  <name>EC_D3_T1_1MH</name>
+  <Service>  data   *1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  CMDCLK /1_module   lin std::Copper  0.000539  std::Aluminium  0.000167  pix::Polyethylene  0.000298  pix::PVC 0.000196  Cu-clad_Al  </Service> <!-- TA34 -->
+  <Service>  HV1    /13_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  HV2    /13_module  lin std::Copper  0.00023  pix::Polyimide  0.00020  Cu  </Service> <!-- HVTP36 -->							 
+  <Service>  LV     /13_module  lin std::Copper  0.01473  pix::Polyimide  0.00048  Cu  </Service> <!-- TP18 -->								 
+  <Service>  VCAN   /13_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Service>  CANBus /13_module  lin std::Copper  0.00086  std::Aluminium  0.00007  pix::Polyimide  0.00017  Cu-clad_Al  </Service> <!-- TP32_schielded -->		 
+  <Service>  Tilock /13_module  lin std::Copper  0.00057  pix::Polyimide  0.00011  Cu  </Service> <!-- TP32 -->								 
+  <Cooling>  TiCO2  *1_stave  lin 2. 2.275 pix::CoolingFluid std::Titanium</Cooling>
+</ServiceSet>
+
+</PixelRoutingServices>
+
+

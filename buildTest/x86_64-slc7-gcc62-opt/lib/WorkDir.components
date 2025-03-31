@@ -1,0 +1,10 @@
+libGepOutputReader.so:CaloCellsReader
+libGepOutputReader.so:WriteOutputHist
+libGepOutputReader.so:WriteOutputTree
+libTrigL0GepPerf.so:ClusterEtCutAlg
+libTrigL0GepPerf.so:ClusterTiming
+libTrigL0GepPerf.so:GepClusteringAlg
+libTrigL0GepPerf.so:GepJetAlg
+libTrigL0GepPerf.so:GepTauAlg
+libTrigL0GepPerf.so:MissingETGepCl
+libTrigL0GepPerf.so:MissingETGepPufit

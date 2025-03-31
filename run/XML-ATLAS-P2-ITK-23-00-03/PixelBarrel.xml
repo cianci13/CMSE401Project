@@ -1,0 +1,56 @@
+<PixelBarrelLayers>     
+      
+<PixelBarrelLayer>      
+  <Name>  PixelBarrel0  </Name>
+  <StaveType> IBL </StaveType>
+  <Number>  0 </Number>
+  <NStaves> 12  </NStaves>
+  <LayerRadius> 34.0  </LayerRadius>
+  <StaveTilt> -0.24435  </StaveTilt>
+  <StaveZOffset>  0.0 </StaveZOffset>
+</PixelBarrelLayer>     
+      
+<PixelBarrelLayer>      
+  <Name>  PixelBarrel1  </Name>
+  <StaveType> IBL </StaveType>
+  <Number>  1 </Number>
+  <NStaves> 20  </NStaves>
+  <LayerRadius> 99.0  </LayerRadius>
+  <StaveTilt> -0.24435  </StaveTilt>
+  <StaveZOffset>  0.0 </StaveZOffset>
+</PixelBarrelLayer>     
+      
+<PixelBarrelLayer>      
+  <Name>  PixelBarrel2  </Name>
+  <StaveType> Alpine  </StaveType>
+  <Number>  2 </Number>
+  <NStaves> 32  </NStaves>
+  <LayerRadius> 160.0 </LayerRadius>
+  <StaveTilt> 0.0 </StaveTilt>
+</PixelBarrelLayer>     
+      
+<PixelBarrelLayer>      
+  <Name>  PixelBarrel3  </Name>
+  <StaveType> Alpine  </StaveType>
+  <Number>  3 </Number>
+  <NStaves> 44  </NStaves>
+  <LayerRadius> 228.0 </LayerRadius>
+  <StaveTilt> 0.0 </StaveTilt>
+</PixelBarrelLayer>     
+      
+<PixelBarrelLayer>      
+  <Name>  PixelBarrel4  </Name>
+  <StaveType> Alpine  </StaveType>
+  <Number>  4 </Number>
+  <NStaves> 56  </NStaves>
+  <LayerRadius> 291.0 </LayerRadius>
+  <StaveTilt> 0.0 </StaveTilt>
+</PixelBarrelLayer>     
+
+<PassiveBarrelLayers>
+  <Radii> 70.0 200.0 260.0 320.0 </Radii>
+  <HalfLength> 245.0 350.0 350.0 350.0 </HalfLength>
+</PassiveBarrelLayers>
+      
+</PixelBarrelLayers>      
+

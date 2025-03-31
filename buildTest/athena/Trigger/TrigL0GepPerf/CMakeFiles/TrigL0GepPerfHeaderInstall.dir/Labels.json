@@ -1,0 +1,19 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/build/x86_64-slc7-gcc62-opt/include/TrigL0GepPerf"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/build/x86_64-slc7-gcc62-opt/include/TrigL0GepPerf.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"TrigL0GepPerf"
+		],
+		"name" : "TrigL0GepPerfHeaderInstall"
+	}
+}

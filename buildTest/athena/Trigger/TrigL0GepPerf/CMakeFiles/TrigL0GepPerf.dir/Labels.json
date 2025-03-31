@@ -1,0 +1,52 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/CaloCellsHandler.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/ClusterEtCutAlg.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/ClusterTiming.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/ConeJetMaker.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/GepClusteringAlg.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/GepJetAlg.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/GepTauAlg.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/MissingETGepCl.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/MissingETGepPufit.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/ModAntikTJetMaker.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/WFSTopoClustering.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/components/TrigL0GepPerf_entries.cxx"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/athena/Trigger/TrigL0GepPerf/src/components/TrigL0GepPerf_load.cxx"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"TrigL0GepPerf"
+		],
+		"name" : "TrigL0GepPerf"
+	}
+}

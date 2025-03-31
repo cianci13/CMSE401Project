@@ -1,0 +1,58 @@
+<PixelGeneralData>
+
+  <PixelGeneral>
+     <Barrel>true</Barrel>
+     <EndcapA>true</EndcapA>
+     <EndcapC>true</EndcapC>
+     <BCMPrime>true</BCMPrime>
+     <HasSensorDeadEdge>true</HasSensorDeadEdge>
+ </PixelGeneral>
+
+  <PixelEnvelope>
+     <RadiusMin> 28.9 </RadiusMin>
+     <RadiusMax> 346.699 </RadiusMax>
+     <HalfLength> 3420. </HalfLength>
+  </PixelEnvelope>
+
+  <PixelCommon>
+     <RadiusMin> 28.9 </RadiusMin>
+     <RadiusMax> 346.699 </RadiusMax>
+     <HalfLength> 3420. </HalfLength>
+  </PixelCommon>
+
+  <PixelBarrelEnvelope>
+     <Name>Barrel</Name>
+     <RadiusMin> 28.9 </RadiusMin>
+     <RadiusMax> 340.99 </RadiusMax>
+     <HalfLength> 381.5 </HalfLength>
+     <RadiusList> 29.001 149.9 340.99</RadiusList>
+     <HalfLengthList> 253.5 381.5 </HalfLengthList>
+  </PixelBarrelEnvelope>
+
+  <PixelBarrelSupport>
+     <ZOffsetList> 0. </ZOffsetList>
+     <ThicknessList> 1.0 </ThicknessList>
+     <MaterialList> pix::CarbonFibre </MaterialList>
+     <RminInnerList> 32.0 </RminInnerList>
+     <RmaxInnerList> 44.0 </RmaxInnerList>
+     <RminOuterList> 94.0 </RminOuterList>
+     <RmaxOuterList> 104.0 </RmaxOuterList>
+     <NSectorsList> 8 </NSectorsList>
+     <SPhiList> 0. </SPhiList>
+     <DPhiList> 6. </DPhiList>
+  </PixelBarrelSupport>
+
+  <PixelEndcapEnvelope>
+     <Name>Endcap</Name>
+     <RadiusMin> 28.9 </RadiusMin>
+     <RadiusMax> 340.99 </RadiusMax>
+     <ZMin> 253.5 </ZMin>
+     <ZMax> 3420. </ZMax>
+     <RadiusList> 28.9  149.9 340.99</RadiusList>
+     <ZMinList> 253.5 381.5. </ZMinList>
+  </PixelEndcapEnvelope>
+
+  <PixelLayerEnvelope>
+  </PixelLayerEnvelope>
+
+</PixelGeneralData>

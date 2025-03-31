@@ -1,0 +1,19 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/build/x86_64-slc7-gcc62-opt/include/GepOutputReader"
+		},
+		{
+			"file" : "/msu/data/t3work13/dcianciolo/gepOutput2/gep/build/x86_64-slc7-gcc62-opt/include/GepOutputReader.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"GepOutputReader"
+		],
+		"name" : "GepOutputReaderHeaderInstall"
+	}
+}

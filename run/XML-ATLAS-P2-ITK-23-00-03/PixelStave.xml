@@ -1,0 +1,65 @@
+<PixelStaves>                                     
+                                      
+                                      
+<PixelStave>                                      
+  <Name>  PixelBarrel0  </Name>                               
+  <Type>  IBL </Type>                               
+  <Layer> 0 </Layer>                                
+  <NBarrelModules>  12  </NBarrelModules>                               
+  <BarrelModuleType>  SingleChip_RD53_3D_25x100  </BarrelModuleType>                               
+  <BarrelModuleGap> 0.2 </BarrelModuleGap>                                
+  <StaveSupportLength>  252.3 </StaveSupportLength>                             
+</PixelStave>                                     
+                                      
+<PixelStave>                                      
+  <Name>  PixelBarrel1  </Name>                               
+  <Type>  IBL </Type>                               
+  <Layer> 1 </Layer>                                
+  <NBarrelModules>  6 </NBarrelModules>                               
+  <BarrelModuleType>  QuadChip_RD53_thin  </BarrelModuleType>                               
+  <BarrelModuleGap> 0.2 </BarrelModuleGap>                                
+  <StaveSupportLength>  251.5 </StaveSupportLength>  
+</PixelStave>                                     
+                                      
+                                      
+<PixelStave>                                      
+  <Name>  PixelBarrel20 </Name>                               
+  <Type>  Alpine  </Type>                               
+  <Layer> 2 </Layer>                                
+  <NBarrelModules>  9 </NBarrelModules>                               
+  <BarrelModuleType>  QuadChip_RD53_PlusTPGCooling </BarrelModuleType>                               
+  <BarrelModuleTilt>  -0.24435  </BarrelModuleTilt>                               
+  <BarrelModuleGap> 0.3 </BarrelModuleGap>                                
+  <BarrelModuleRShift>  0.0 </BarrelModuleRShift>                               
+  <BarrelModuleZOffset> 4.0 </BarrelModuleZOffset>                                
+  <StaveSupportLength>  370.  </StaveSupportLength>  
+</PixelStave>                                     
+                                      
+<PixelStave>                                      
+  <Name>  PixelBarrel30 </Name>                               
+  <Type>  Alpine  </Type>                               
+  <Layer> 3 </Layer>                                
+  <NBarrelModules>  9 </NBarrelModules>                               
+  <BarrelModuleType>  QuadChip_RD53_PlusTPGCooling </BarrelModuleType>                               
+  <BarrelModuleTilt>  -0.24435  </BarrelModuleTilt>                               
+  <BarrelModuleGap> 0.3 </BarrelModuleGap>                                
+  <BarrelModuleRShift>  0.0 </BarrelModuleRShift>                               
+  <BarrelModuleZOffset> 4.0 </BarrelModuleZOffset>                                
+  <StaveSupportLength>  370.0  </StaveSupportLength>                               
+</PixelStave>                                     
+                                      
+<PixelStave>                                      
+  <Name>  PixelBarrel40 </Name>                               
+  <Type>  Alpine  </Type>                               
+  <Layer> 4 </Layer>                                
+  <NBarrelModules>  9 </NBarrelModules>                               
+  <BarrelModuleType>  QuadChip_RD53_PlusTPGCooling </BarrelModuleType>                               
+  <BarrelModuleTilt>  -0.24435  </BarrelModuleTilt>                               
+  <BarrelModuleGap> 0.3 </BarrelModuleGap>                                
+  <BarrelModuleRShift>  0.0 </BarrelModuleRShift>                               
+  <BarrelModuleZOffset> 4.0 </BarrelModuleZOffset>                                
+  <StaveSupportLength>  370.0  </StaveSupportLength>                               
+</PixelStave>                                     
+                                      
+                                      
+</PixelStaves>                                      
