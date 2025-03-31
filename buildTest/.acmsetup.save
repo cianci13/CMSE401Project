@@ -1,4 +1,0 @@
-SourceArea = /mnt/ffs24/home/cianci13/CMSE401Project/build/../source
-TestArea = /mnt/ffs24/home/cianci13/CMSE401Project/build
-ACM_GITLAB_PATH_PREFIX = https://:@gitlab.cern.ch:8443/
-asetupArguments = Athena,main,latest

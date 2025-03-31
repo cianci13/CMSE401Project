@@ -1,8 +1,0 @@
-# Target labels
- GepOutputReader
-# Source files and their labels
-/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/CaloCellsReader.cxx
-/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/WriteOutputHist.cxx
-/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/WriteOutputTree.cxx
-/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/components/GepOutputReader_entries.cxx
-/msu/data/t3work13/dcianciolo/gepOutput2/gep/source/GepOutputReader/src/components/GepOutputReader_load.cxx
