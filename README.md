@@ -19,6 +19,7 @@ Beyond the first install:
 - lsetup "root 6.34.04-x86_64-el9-gcc13-opt"
 
 Running (in CMSE401Project)
+- set file paths to the paths to your input files, and the file you want to output to
 - sbatch run.sb
 - sbatch scalingStudy.sb
 
