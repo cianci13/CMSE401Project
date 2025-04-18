@@ -1,0 +1,6 @@
+AutoDict_*
+*.d
+*.pcm
+*.so
+condor
+condor/*
