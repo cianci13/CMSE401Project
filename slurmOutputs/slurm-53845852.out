@@ -1,0 +1,397 @@
+[7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
+[7m lsetup asetup      [0m  (or asetup) to setup an Athena release
+[7m lsetup astyle      [0m  ATLAS style macros
+[7m lsetup atlantis    [0m  Atlantis: event display
+[7m lsetup centralpage [0m  Find samples
+[7m lsetup eiclient    [0m  Event Index 
+[7m lsetup emi         [0m  EMI: grid middleware user interface 
+[7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
+[7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
+[7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
+[7m lsetup root        [0m  ROOT data processing framework
+[7m lsetup rucio       [0m  distributed data management system client
+[7m lsetup scikit      [0m  python data analysis ecosystem
+[7m lsetup views       [0m  Set up a full LCG release
+[7m lsetup xcache      [0m  XRootD local proxy cache
+[7m lsetup xrootd      [0m  XRootD data access
+[7madvancedTools       [0m advanced tools menu
+[7mdiagnostics         [0m diagnostic tools menu
+[7mhelpMe              [0m more help
+[7minstallPip          [0m install relocatable pip modules locally
+[7minstallRpm          [0m install relocatable rpms locally
+[7mprintMenu           [0m show this menu
+[7mqueryC              [0m find / whatis container query
+[7mshowVersions        [0m show versions of installed software
+
+
+[1m[4m30 Nov 2023[0m 
+
+A serious security issue in ROOT's web-based GUI has been identified:
+
+  You should not use the web-based browser until further notice and instead 
+  set the old-style TBrowser as the default. Please see the Twiki page linked 
+  below for instructions on how to do this.
+
+  https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
+
+  More details of this issue:
+  https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
+
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m 
+
+************************************************************************
+Requested:  root ... 
+ Setting up [4mroot 6.34.04-x86_64-el9-gcc13-opt[0m ... 
+  ROOT is from lcgenv -p LCG_107a_ATLAS_2 x86_64-el9-gcc13-opt ROOT
+>>>>>>>>>>>>>>>>>>>>>>>>> Information for user <<<<<<<<<<<<<<<<<<<<<<<<<
+ root:
+   Tip for _this_ standalone ROOT and grid (ie prun) submission:
+    avoid --athenaTag if you do not need athena
+    use --rootVer=6.34.04 --cmtConfig=x86_64-el9-gcc13-opt
+ root:
+   Note this ROOT from lcgenv sets up a long list of library paths.
+   This may slow down executables; they look at each library path item.
+   A faster alternative - setup the entire LCG stack with views:
+    lsetup "views LCG_107a_ATLAS_2 x86_64-el9-gcc13-opt"
+************************************************************************
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.34.04                        https://root.cern |
+  | (c) 1995-2024, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Feb 11 2025, 14:05:34                 |
+  | From tags/6-34-04@6-34-04                                        |
+  | With g++ (GCC) 13.1.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing new_hist_maker.c...
+In file included from input_line_8:1:
+In file included from /mnt/ffs24/home/cianci13/CMSE401Project/gephistmaker/new_hist_maker.c:24:
+/mnt/ffs24/home/cianci13/CMSE401Project/gephistmaker/more_plots.c:50:11: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+        float xs[xNbins+2], ys[xNbins+2]; 
+                 ^~~~~~~~
+/mnt/ffs24/home/cianci13/CMSE401Project/gephistmaker/more_plots.c:50:11: note: read of non-const variable 'xNbins' is not allowed in a constant expression
+/mnt/ffs24/home/cianci13/CMSE401Project/gephistmaker/more_plots.c:46:6: note: declared here
+        int xNbins = xHist->GetNbinsX(); 
+            ^
+/mnt/ffs24/home/cianci13/CMSE401Project/gephistmaker/more_plots.c:50:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+        float xs[xNbins+2], ys[xNbins+2]; 
+                               ^~~~~~~~
+/mnt/ffs24/home/cianci13/CMSE401Project/gephistmaker/more_plots.c:50:25: note: read of non-const variable 'xNbins' is not allowed in a constant expression
+/mnt/ffs24/home/cianci13/CMSE401Project/gephistmaker/more_plots.c:46:6: note: declared here
+        int xNbins = xHist->GetNbinsX(); 
+            ^
+[2m    Parsing ntuple: /mnt/home/cianci13/CMSE401Project/gephistmaker/inputTree.root
+[0mParsing ntuple event: 1/100 (1.0%)Parsing ntuple event: 2/100 (2.0%)Parsing ntuple event: 3/100 (3.0%)Parsing ntuple event: 4/100 (4.0%)Parsing ntuple event: 5/100 (5.0%)Parsing ntuple event: 6/100 (6.0%)Parsing ntuple event: 7/100 (7.0%)Parsing ntuple event: 8/100 (8.0%)Parsing ntuple event: 9/100 (9.0%)Parsing ntuple event: 10/100 (10.0%)Parsing ntuple event: 11/100 (11.0%)Parsing ntuple event: 12/100 (12.0%)Parsing ntuple event: 13/100 (13.0%)Parsing ntuple event: 14/100 (14.0%)Parsing ntuple event: 15/100 (15.0%)Parsing ntuple event: 16/100 (16.0%)Parsing ntuple event: 17/100 (17.0%)Parsing ntuple event: 18/100 (18.0%)Parsing ntuple event: 19/100 (19.0%)Parsing ntuple event: 20/100 (20.0%)Parsing ntuple event: 21/100 (21.0%)Parsing ntuple event: 22/100 (22.0%)Parsing ntuple event: 23/100 (23.0%)Parsing ntuple event: 24/100 (24.0%)Parsing ntuple event: 25/100 (25.0%)Parsing ntuple event: 26/100 (26.0%)Parsing ntuple event: 27/100 (27.0%)Parsing ntuple event: 28/100 (28.0%)Parsing ntuple event: 29/100 (29.0%)Parsing ntuple event: 30/100 (30.0%)Parsing ntuple event: 31/100 (31.0%)Parsing ntuple event: 32/100 (32.0%)Parsing ntuple event: 33/100 (33.0%)Parsing ntuple event: 34/100 (34.0%)Parsing ntuple event: 35/100 (35.0%)Parsing ntuple event: 36/100 (36.0%)Parsing ntuple event: 37/100 (37.0%)Parsing ntuple event: 38/100 (38.0%)Parsing ntuple event: 39/100 (39.0%)Parsing ntuple event: 40/100 (40.0%)Parsing ntuple event: 41/100 (41.0%)Parsing ntuple event: 42/100 (42.0%)Parsing ntuple event: 43/100 (43.0%)Parsing ntuple event: 44/100 (44.0%)Parsing ntuple event: 45/100 (45.0%)Parsing ntuple event: 46/100 (46.0%)Parsing ntuple event: 47/100 (47.0%)Parsing ntuple event: 48/100 (48.0%)Parsing ntuple event: 49/100 (49.0%)Parsing ntuple event: 50/100 (50.0%)Parsing ntuple event: 51/100 (51.0%)Parsing ntuple event: 52/100 (52.0%)Parsing ntuple event: 53/100 (53.0%)Parsing ntuple event: 54/100 (54.0%)Parsing ntuple event: 55/100 (55.0%)Parsing ntuple event: 56/100 (56.0%)Parsing ntuple event: 57/100 (57.0%)Parsing ntuple event: 58/100 (58.0%)Parsing ntuple event: 59/100 (59.0%)Parsing ntuple event: 60/100 (60.0%)Parsing ntuple event: 61/100 (61.0%)Parsing ntuple event: 62/100 (62.0%)Parsing ntuple event: 63/100 (63.0%)Parsing ntuple event: 64/100 (64.0%)Parsing ntuple event: 65/100 (65.0%)Parsing ntuple event: 66/100 (66.0%)Parsing ntuple event: 67/100 (67.0%)Parsing ntuple event: 68/100 (68.0%)Parsing ntuple event: 69/100 (69.0%)Parsing ntuple event: 70/100 (70.0%)Parsing ntuple event: 71/100 (71.0%)Parsing ntuple event: 72/100 (72.0%)Parsing ntuple event: 73/100 (73.0%)Parsing ntuple event: 74/100 (74.0%)Parsing ntuple event: 75/100 (75.0%)Parsing ntuple event: 76/100 (76.0%)Parsing ntuple event: 77/100 (77.0%)Parsing ntuple event: 78/100 (78.0%)Parsing ntuple event: 79/100 (79.0%)Parsing ntuple event: 80/100 (80.0%)Parsing ntuple event: 81/100 (81.0%)Parsing ntuple event: 82/100 (82.0%)Parsing ntuple event: 83/100 (83.0%)Parsing ntuple event: 84/100 (84.0%)Parsing ntuple event: 85/100 (85.0%)Parsing ntuple event: 86/100 (86.0%)Parsing ntuple event: 87/100 (87.0%)Parsing ntuple event: 88/100 (88.0%)Parsing ntuple event: 89/100 (89.0%)Parsing ntuple event: 90/100 (90.0%)Parsing ntuple event: 91/100 (91.0%)Parsing ntuple event: 92/100 (92.0%)Parsing ntuple event: 93/100 (93.0%)Parsing ntuple event: 94/100 (94.0%)Parsing ntuple event: 95/100 (95.0%)Parsing ntuple event: 96/100 (96.0%)Parsing ntuple event: 97/100 (97.0%)Parsing ntuple event: 98/100 (98.0%)Parsing ntuple event: 99/100 (99.0%)Parsing ntuple event: 100/100 (100.0%)
+Matching reco to truth tau: 1/100 (1.0%)Matching reco to truth tau: 2/100 (2.0%)Matching reco to truth tau: 3/100 (3.0%)Matching reco to truth tau: 4/100 (4.0%)Matching reco to truth tau: 5/100 (5.0%)Matching reco to truth tau: 6/100 (6.0%)Matching reco to truth tau: 7/100 (7.0%)Matching reco to truth tau: 8/100 (8.0%)Matching reco to truth tau: 9/100 (9.0%)Matching reco to truth tau: 10/100 (10.0%)Matching reco to truth tau: 11/100 (11.0%)Matching reco to truth tau: 12/100 (12.0%)Matching reco to truth tau: 13/100 (13.0%)Matching reco to truth tau: 14/100 (14.0%)Matching reco to truth tau: 15/100 (15.0%)Matching reco to truth tau: 16/100 (16.0%)Matching reco to truth tau: 17/100 (17.0%)Matching reco to truth tau: 18/100 (18.0%)Matching reco to truth tau: 19/100 (19.0%)Matching reco to truth tau: 20/100 (20.0%)Matching reco to truth tau: 21/100 (21.0%)Matching reco to truth tau: 22/100 (22.0%)Matching reco to truth tau: 23/100 (23.0%)Matching reco to truth tau: 24/100 (24.0%)Matching reco to truth tau: 25/100 (25.0%)Matching reco to truth tau: 26/100 (26.0%)Matching reco to truth tau: 27/100 (27.0%)Matching reco to truth tau: 28/100 (28.0%)Matching reco to truth tau: 29/100 (29.0%)Matching reco to truth tau: 30/100 (30.0%)Matching reco to truth tau: 31/100 (31.0%)Matching reco to truth tau: 32/100 (32.0%)Matching reco to truth tau: 33/100 (33.0%)Matching reco to truth tau: 34/100 (34.0%)Matching reco to truth tau: 35/100 (35.0%)Matching reco to truth tau: 36/100 (36.0%)Matching reco to truth tau: 37/100 (37.0%)Matching reco to truth tau: 38/100 (38.0%)Matching reco to truth tau: 39/100 (39.0%)Matching reco to truth tau: 40/100 (40.0%)Matching reco to truth tau: 41/100 (41.0%)Matching reco to truth tau: 42/100 (42.0%)Matching reco to truth tau: 43/100 (43.0%)Matching reco to truth tau: 44/100 (44.0%)Matching reco to truth tau: 45/100 (45.0%)Matching reco to truth tau: 46/100 (46.0%)Matching reco to truth tau: 47/100 (47.0%)Matching reco to truth tau: 48/100 (48.0%)Matching reco to truth tau: 49/100 (49.0%)Matching reco to truth tau: 50/100 (50.0%)Matching reco to truth tau: 51/100 (51.0%)Matching reco to truth tau: 52/100 (52.0%)Matching reco to truth tau: 53/100 (53.0%)Matching reco to truth tau: 54/100 (54.0%)Matching reco to truth tau: 55/100 (55.0%)Matching reco to truth tau: 56/100 (56.0%)Matching reco to truth tau: 57/100 (57.0%)Matching reco to truth tau: 58/100 (58.0%)Matching reco to truth tau: 59/100 (59.0%)Matching reco to truth tau: 60/100 (60.0%)Matching reco to truth tau: 61/100 (61.0%)Matching reco to truth tau: 62/100 (62.0%)Matching reco to truth tau: 63/100 (63.0%)Matching reco to truth tau: 64/100 (64.0%)Matching reco to truth tau: 65/100 (65.0%)Matching reco to truth tau: 66/100 (66.0%)Matching reco to truth tau: 67/100 (67.0%)Matching reco to truth tau: 68/100 (68.0%)Matching reco to truth tau: 69/100 (69.0%)Matching reco to truth tau: 70/100 (70.0%)Matching reco to truth tau: 71/100 (71.0%)Matching reco to truth tau: 72/100 (72.0%)Matching reco to truth tau: 73/100 (73.0%)Matching reco to truth tau: 74/100 (74.0%)Matching reco to truth tau: 75/100 (75.0%)Matching reco to truth tau: 76/100 (76.0%)Matching reco to truth tau: 77/100 (77.0%)Matching reco to truth tau: 78/100 (78.0%)Matching reco to truth tau: 79/100 (79.0%)Matching reco to truth tau: 80/100 (80.0%)Matching reco to truth tau: 81/100 (81.0%)Matching reco to truth tau: 82/100 (82.0%)Matching reco to truth tau: 83/100 (83.0%)Matching reco to truth tau: 84/100 (84.0%)Matching reco to truth tau: 85/100 (85.0%)Matching reco to truth tau: 86/100 (86.0%)Matching reco to truth tau: 87/100 (87.0%)Matching reco to truth tau: 88/100 (88.0%)Matching reco to truth tau: 89/100 (89.0%)Matching reco to truth tau: 90/100 (90.0%)Matching reco to truth tau: 91/100 (91.0%)Matching reco to truth tau: 92/100 (92.0%)Matching reco to truth tau: 93/100 (93.0%)Matching reco to truth tau: 94/100 (94.0%)Matching reco to truth tau: 95/100 (95.0%)Matching reco to truth tau: 96/100 (96.0%)Matching reco to truth tau: 97/100 (97.0%)Matching reco to truth tau: 98/100 (98.0%)Matching reco to truth tau: 99/100 (99.0%)Matching reco to truth tau: 100/100 (100.0%)
+Cluster matching for event: 1/100 (1.0%)Cluster matching for event: 2/100 (2.0%)Cluster matching for event: 3/100 (3.0%)Cluster matching for event: 4/100 (4.0%)Cluster matching for event: 5/100 (5.0%)Cluster matching for event: 6/100 (6.0%)Cluster matching for event: 7/100 (7.0%)Cluster matching for event: 8/100 (8.0%)Cluster matching for event: 9/100 (9.0%)Cluster matching for event: 10/100 (10.0%)Cluster matching for event: 11/100 (11.0%)Cluster matching for event: 12/100 (12.0%)Cluster matching for event: 13/100 (13.0%)Cluster matching for event: 14/100 (14.0%)Cluster matching for event: 15/100 (15.0%)Cluster matching for event: 16/100 (16.0%)Cluster matching for event: 17/100 (17.0%)Cluster matching for event: 18/100 (18.0%)Cluster matching for event: 19/100 (19.0%)Cluster matching for event: 20/100 (20.0%)Cluster matching for event: 21/100 (21.0%)Cluster matching for event: 22/100 (22.0%)Cluster matching for event: 23/100 (23.0%)Cluster matching for event: 24/100 (24.0%)Cluster matching for event: 25/100 (25.0%)Cluster matching for event: 26/100 (26.0%)Cluster matching for event: 27/100 (27.0%)Cluster matching for event: 28/100 (28.0%)Cluster matching for event: 29/100 (29.0%)Cluster matching for event: 30/100 (30.0%)Cluster matching for event: 31/100 (31.0%)Cluster matching for event: 32/100 (32.0%)Cluster matching for event: 33/100 (33.0%)Cluster matching for event: 34/100 (34.0%)Cluster matching for event: 35/100 (35.0%)Cluster matching for event: 36/100 (36.0%)Cluster matching for event: 37/100 (37.0%)Cluster matching for event: 38/100 (38.0%)Cluster matching for event: 39/100 (39.0%)Cluster matching for event: 40/100 (40.0%)Cluster matching for event: 41/100 (41.0%)Cluster matching for event: 42/100 (42.0%)Cluster matching for event: 43/100 (43.0%)Cluster matching for event: 44/100 (44.0%)Cluster matching for event: 45/100 (45.0%)Cluster matching for event: 46/100 (46.0%)Cluster matching for event: 47/100 (47.0%)Cluster matching for event: 48/100 (48.0%)Cluster matching for event: 49/100 (49.0%)Cluster matching for event: 50/100 (50.0%)Cluster matching for event: 51/100 (51.0%)Cluster matching for event: 52/100 (52.0%)Cluster matching for event: 53/100 (53.0%)Cluster matching for event: 54/100 (54.0%)Cluster matching for event: 55/100 (55.0%)Cluster matching for event: 56/100 (56.0%)Cluster matching for event: 57/100 (57.0%)Cluster matching for event: 58/100 (58.0%)Cluster matching for event: 59/100 (59.0%)Cluster matching for event: 60/100 (60.0%)Cluster matching for event: 61/100 (61.0%)Cluster matching for event: 62/100 (62.0%)Cluster matching for event: 63/100 (63.0%)Cluster matching for event: 64/100 (64.0%)Cluster matching for event: 65/100 (65.0%)Cluster matching for event: 66/100 (66.0%)Cluster matching for event: 67/100 (67.0%)Cluster matching for event: 68/100 (68.0%)Cluster matching for event: 69/100 (69.0%)Cluster matching for event: 70/100 (70.0%)Cluster matching for event: 71/100 (71.0%)Cluster matching for event: 72/100 (72.0%)Cluster matching for event: 73/100 (73.0%)Cluster matching for event: 74/100 (74.0%)Cluster matching for event: 75/100 (75.0%)Cluster matching for event: 76/100 (76.0%)Cluster matching for event: 77/100 (77.0%)Cluster matching for event: 78/100 (78.0%)Cluster matching for event: 79/100 (79.0%)Cluster matching for event: 80/100 (80.0%)Cluster matching for event: 81/100 (81.0%)Cluster matching for event: 82/100 (82.0%)Cluster matching for event: 83/100 (83.0%)Cluster matching for event: 84/100 (84.0%)Cluster matching for event: 85/100 (85.0%)Cluster matching for event: 86/100 (86.0%)Cluster matching for event: 87/100 (87.0%)Cluster matching for event: 88/100 (88.0%)Cluster matching for event: 89/100 (89.0%)Cluster matching for event: 90/100 (90.0%)Cluster matching for event: 91/100 (91.0%)Cluster matching for event: 92/100 (92.0%)Cluster matching for event: 93/100 (93.0%)Cluster matching for event: 94/100 (94.0%)Cluster matching for event: 95/100 (95.0%)Cluster matching for event: 96/100 (96.0%)Cluster matching for event: 97/100 (97.0%)Cluster matching for event: 98/100 (98.0%)Cluster matching for event: 99/100 (99.0%)Cluster matching for event: 100/100 (100.0%)
+[2m    Hist save destination: /mnt/home/cianci13/CMSE401Project/gephistmaker/outputHists.root
+[0mPushing back hist vars for event: 1/100 (1.0%)Pushing back hist vars for event: 2/100 (2.0%)Pushing back hist vars for event: 3/100 (3.0%)Pushing back hist vars for event: 4/100 (4.0%)Pushing back hist vars for event: 5/100 (5.0%)Pushing back hist vars for event: 6/100 (6.0%)Pushing back hist vars for event: 7/100 (7.0%)Pushing back hist vars for event: 8/100 (8.0%)Pushing back hist vars for event: 9/100 (9.0%)Pushing back hist vars for event: 10/100 (10.0%)Pushing back hist vars for event: 11/100 (11.0%)Pushing back hist vars for event: 12/100 (12.0%)Pushing back hist vars for event: 13/100 (13.0%)Pushing back hist vars for event: 14/100 (14.0%)Pushing back hist vars for event: 15/100 (15.0%)Pushing back hist vars for event: 16/100 (16.0%)Pushing back hist vars for event: 17/100 (17.0%)Pushing back hist vars for event: 18/100 (18.0%)Pushing back hist vars for event: 19/100 (19.0%)Pushing back hist vars for event: 20/100 (20.0%)Pushing back hist vars for event: 21/100 (21.0%)Pushing back hist vars for event: 22/100 (22.0%)Pushing back hist vars for event: 23/100 (23.0%)Pushing back hist vars for event: 24/100 (24.0%)Pushing back hist vars for event: 25/100 (25.0%)Pushing back hist vars for event: 26/100 (26.0%)Pushing back hist vars for event: 27/100 (27.0%)Pushing back hist vars for event: 28/100 (28.0%)Pushing back hist vars for event: 29/100 (29.0%)Pushing back hist vars for event: 30/100 (30.0%)Pushing back hist vars for event: 31/100 (31.0%)Pushing back hist vars for event: 32/100 (32.0%)Pushing back hist vars for event: 33/100 (33.0%)Pushing back hist vars for event: 34/100 (34.0%)Pushing back hist vars for event: 35/100 (35.0%)Pushing back hist vars for event: 36/100 (36.0%)Pushing back hist vars for event: 37/100 (37.0%)Pushing back hist vars for event: 38/100 (38.0%)Pushing back hist vars for event: 39/100 (39.0%)Pushing back hist vars for event: 40/100 (40.0%)Pushing back hist vars for event: 41/100 (41.0%)Pushing back hist vars for event: 42/100 (42.0%)Pushing back hist vars for event: 43/100 (43.0%)Pushing back hist vars for event: 44/100 (44.0%)Pushing back hist vars for event: 45/100 (45.0%)Pushing back hist vars for event: 46/100 (46.0%)Pushing back hist vars for event: 47/100 (47.0%)Pushing back hist vars for event: 48/100 (48.0%)Pushing back hist vars for event: 49/100 (49.0%)Pushing back hist vars for event: 50/100 (50.0%)Pushing back hist vars for event: 51/100 (51.0%)Pushing back hist vars for event: 52/100 (52.0%)Pushing back hist vars for event: 53/100 (53.0%)Pushing back hist vars for event: 54/100 (54.0%)Pushing back hist vars for event: 55/100 (55.0%)Pushing back hist vars for event: 56/100 (56.0%)Pushing back hist vars for event: 57/100 (57.0%)Pushing back hist vars for event: 58/100 (58.0%)Pushing back hist vars for event: 59/100 (59.0%)Pushing back hist vars for event: 60/100 (60.0%)Pushing back hist vars for event: 61/100 (61.0%)Pushing back hist vars for event: 62/100 (62.0%)Pushing back hist vars for event: 63/100 (63.0%)Pushing back hist vars for event: 64/100 (64.0%)Pushing back hist vars for event: 65/100 (65.0%)Pushing back hist vars for event: 66/100 (66.0%)Pushing back hist vars for event: 67/100 (67.0%)Pushing back hist vars for event: 68/100 (68.0%)Pushing back hist vars for event: 69/100 (69.0%)Pushing back hist vars for event: 70/100 (70.0%)Pushing back hist vars for event: 71/100 (71.0%)Pushing back hist vars for event: 72/100 (72.0%)Pushing back hist vars for event: 73/100 (73.0%)Pushing back hist vars for event: 74/100 (74.0%)Pushing back hist vars for event: 75/100 (75.0%)Pushing back hist vars for event: 76/100 (76.0%)Pushing back hist vars for event: 77/100 (77.0%)Pushing back hist vars for event: 78/100 (78.0%)Pushing back hist vars for event: 79/100 (79.0%)Pushing back hist vars for event: 80/100 (80.0%)Pushing back hist vars for event: 81/100 (81.0%)Pushing back hist vars for event: 82/100 (82.0%)Pushing back hist vars for event: 83/100 (83.0%)Pushing back hist vars for event: 84/100 (84.0%)Pushing back hist vars for event: 85/100 (85.0%)Pushing back hist vars for event: 86/100 (86.0%)Pushing back hist vars for event: 87/100 (87.0%)Pushing back hist vars for event: 88/100 (88.0%)Pushing back hist vars for event: 89/100 (89.0%)Pushing back hist vars for event: 90/100 (90.0%)Pushing back hist vars for event: 91/100 (91.0%)Pushing back hist vars for event: 92/100 (92.0%)Pushing back hist vars for event: 93/100 (93.0%)Pushing back hist vars for event: 94/100 (94.0%)Pushing back hist vars for event: 95/100 (95.0%)Pushing back hist vars for event: 96/100 (96.0%)Pushing back hist vars for event: 97/100 (97.0%)Pushing back hist vars for event: 98/100 (98.0%)Pushing back hist vars for event: 99/100 (99.0%)Pushing back hist vars for event: 100/100 (100.0%)
+Plotting TH1F: 1/372 (0.3%)Plotting TH1F: 2/372 (0.5%)Plotting TH1F: 3/372 (0.8%)Plotting TH1F: 4/372 (1.1%)Plotting TH1F: 5/372 (1.3%)Plotting TH1F: 6/372 (1.6%)Plotting TH1F: 7/372 (1.9%)Plotting TH1F: 8/372 (2.2%)Plotting TH1F: 9/372 (2.4%)Plotting TH1F: 10/372 (2.7%)Plotting TH1F: 11/372 (3.0%)Plotting TH1F: 12/372 (3.2%)Plotting TH1F: 13/372 (3.5%)Plotting TH1F: 14/372 (3.8%)Plotting TH1F: 15/372 (4.0%)Plotting TH1F: 16/372 (4.3%)Plotting TH1F: 17/372 (4.6%)Plotting TH1F: 18/372 (4.8%)Plotting TH1F: 19/372 (5.1%)Plotting TH1F: 20/372 (5.4%)Plotting TH1F: 21/372 (5.6%)Plotting TH1F: 22/372 (5.9%)Plotting TH1F: 23/372 (6.2%)Plotting TH1F: 24/372 (6.5%)Plotting TH1F: 25/372 (6.7%)Plotting TH1F: 26/372 (7.0%)Plotting TH1F: 27/372 (7.3%)Plotting TH1F: 28/372 (7.5%)Plotting TH1F: 29/372 (7.8%)Plotting TH1F: 30/372 (8.1%)Plotting TH1F: 31/372 (8.3%)Plotting TH1F: 32/372 (8.6%)Plotting TH1F: 33/372 (8.9%)Plotting TH1F: 34/372 (9.1%)Plotting TH1F: 35/372 (9.4%)Plotting TH1F: 36/372 (9.7%)Plotting TH1F: 37/372 (9.9%)Plotting TH1F: 38/372 (10.2%)Plotting TH1F: 39/372 (10.5%)Plotting TH1F: 40/372 (10.8%)Plotting TH1F: 41/372 (11.0%)Plotting TH1F: 42/372 (11.3%)Plotting TH1F: 43/372 (11.6%)Plotting TH1F: 44/372 (11.8%)Plotting TH1F: 45/372 (12.1%)Plotting TH1F: 46/372 (12.4%)Plotting TH1F: 47/372 (12.6%)Plotting TH1F: 48/372 (12.9%)Plotting TH1F: 49/372 (13.2%)Plotting TH1F: 50/372 (13.4%)Plotting TH1F: 51/372 (13.7%)Plotting TH1F: 52/372 (14.0%)Plotting TH1F: 53/372 (14.2%)Plotting TH1F: 54/372 (14.5%)Plotting TH1F: 55/372 (14.8%)Plotting TH1F: 56/372 (15.1%)Plotting TH1F: 57/372 (15.3%)Plotting TH1F: 58/372 (15.6%)Plotting TH1F: 59/372 (15.9%)Plotting TH1F: 60/372 (16.1%)Plotting TH1F: 61/372 (16.4%)Plotting TH1F: 62/372 (16.7%)Plotting TH1F: 63/372 (16.9%)Plotting TH1F: 64/372 (17.2%)Plotting TH1F: 65/372 (17.5%)Plotting TH1F: 66/372 (17.7%)Plotting TH1F: 67/372 (18.0%)Plotting TH1F: 68/372 (18.3%)Plotting TH1F: 69/372 (18.5%)Plotting TH1F: 70/372 (18.8%)Plotting TH1F: 71/372 (19.1%)Plotting TH1F: 72/372 (19.4%)Plotting TH1F: 73/372 (19.6%)Plotting TH1F: 74/372 (19.9%)Plotting TH1F: 75/372 (20.2%)Plotting TH1F: 76/372 (20.4%)Plotting TH1F: 77/372 (20.7%)Plotting TH1F: 78/372 (21.0%)Plotting TH1F: 79/372 (21.2%)Plotting TH1F: 80/372 (21.5%)Plotting TH1F: 81/372 (21.8%)Plotting TH1F: 82/372 (22.0%)Plotting TH1F: 83/372 (22.3%)Plotting TH1F: 84/372 (22.6%)Plotting TH1F: 85/372 (22.8%)Plotting TH1F: 86/372 (23.1%)Plotting TH1F: 87/372 (23.4%)Plotting TH1F: 88/372 (23.7%)Plotting TH1F: 89/372 (23.9%)Plotting TH1F: 90/372 (24.2%)Plotting TH1F: 91/372 (24.5%)Plotting TH1F: 92/372 (24.7%)Plotting TH1F: 93/372 (25.0%)Plotting TH1F: 94/372 (25.3%)Plotting TH1F: 95/372 (25.5%)Plotting TH1F: 96/372 (25.8%)Plotting TH1F: 97/372 (26.1%)Plotting TH1F: 98/372 (26.3%)Plotting TH1F: 99/372 (26.6%)Plotting TH1F: 100/372 (26.9%)Plotting TH1F: 101/372 (27.2%)Plotting TH1F: 102/372 (27.4%)Plotting TH1F: 103/372 (27.7%)Plotting TH1F: 104/372 (28.0%)Plotting TH1F: 105/372 (28.2%)Plotting TH1F: 106/372 (28.5%)Plotting TH1F: 107/372 (28.8%)Plotting TH1F: 108/372 (29.0%)Plotting TH1F: 109/372 (29.3%)Plotting TH1F: 110/372 (29.6%)Plotting TH1F: 111/372 (29.8%)Plotting TH1F: 112/372 (30.1%)Plotting TH1F: 113/372 (30.4%)Plotting TH1F: 114/372 (30.6%)Plotting TH1F: 115/372 (30.9%)Plotting TH1F: 116/372 (31.2%)Plotting TH1F: 117/372 (31.5%)Plotting TH1F: 118/372 (31.7%)Plotting TH1F: 119/372 (32.0%)Plotting TH1F: 120/372 (32.3%)Plotting TH1F: 121/372 (32.5%)Plotting TH1F: 122/372 (32.8%)Plotting TH1F: 123/372 (33.1%)Plotting TH1F: 124/372 (33.3%)Plotting TH1F: 125/372 (33.6%)Plotting TH1F: 126/372 (33.9%)Plotting TH1F: 127/372 (34.1%)Plotting TH1F: 128/372 (34.4%)Plotting TH1F: 129/372 (34.7%)Plotting TH1F: 130/372 (34.9%)Plotting TH1F: 131/372 (35.2%)Plotting TH1F: 132/372 (35.5%)Plotting TH1F: 133/372 (35.8%)Plotting TH1F: 134/372 (36.0%)Plotting TH1F: 135/372 (36.3%)Plotting TH1F: 136/372 (36.6%)Plotting TH1F: 137/372 (36.8%)Plotting TH1F: 138/372 (37.1%)Plotting TH1F: 139/372 (37.4%)Plotting TH1F: 140/372 (37.6%)Plotting TH1F: 141/372 (37.9%)Plotting TH1F: 142/372 (38.2%)Plotting TH1F: 143/372 (38.4%)Plotting TH1F: 144/372 (38.7%)Plotting TH1F: 145/372 (39.0%)Plotting TH1F: 146/372 (39.2%)Plotting TH1F: 147/372 (39.5%)Plotting TH1F: 148/372 (39.8%)Plotting TH1F: 149/372 (40.1%)Plotting TH1F: 150/372 (40.3%)Plotting TH1F: 151/372 (40.6%)Plotting TH1F: 152/372 (40.9%)Plotting TH1F: 153/372 (41.1%)Plotting TH1F: 154/372 (41.4%)Plotting TH1F: 155/372 (41.7%)Plotting TH1F: 156/372 (41.9%)Plotting TH1F: 157/372 (42.2%)Plotting TH1F: 158/372 (42.5%)Plotting TH1F: 159/372 (42.7%)Plotting TH1F: 160/372 (43.0%)Plotting TH1F: 161/372 (43.3%)Plotting TH1F: 162/372 (43.5%)Plotting TH1F: 163/372 (43.8%)Plotting TH1F: 164/372 (44.1%)Plotting TH1F: 165/372 (44.4%)Plotting TH1F: 166/372 (44.6%)Plotting TH1F: 167/372 (44.9%)Plotting TH1F: 168/372 (45.2%)Plotting TH1F: 169/372 (45.4%)Plotting TH1F: 170/372 (45.7%)Plotting TH1F: 171/372 (46.0%)Plotting TH1F: 172/372 (46.2%)Plotting TH1F: 173/372 (46.5%)Plotting TH1F: 174/372 (46.8%)Plotting TH1F: 175/372 (47.0%)Plotting TH1F: 176/372 (47.3%)Plotting TH1F: 177/372 (47.6%)Plotting TH1F: 178/372 (47.8%)Plotting TH1F: 179/372 (48.1%)Plotting TH1F: 180/372 (48.4%)Plotting TH1F: 181/372 (48.7%)Plotting TH1F: 182/372 (48.9%)Plotting TH1F: 183/372 (49.2%)Plotting TH1F: 184/372 (49.5%)Plotting TH1F: 185/372 (49.7%)Plotting TH1F: 186/372 (50.0%)Plotting TH1F: 187/372 (50.3%)Plotting TH1F: 188/372 (50.5%)Plotting TH1F: 189/372 (50.8%)Plotting TH1F: 190/372 (51.1%)Plotting TH1F: 191/372 (51.3%)Plotting TH1F: 192/372 (51.6%)Plotting TH1F: 193/372 (51.9%)Plotting TH1F: 194/372 (52.2%)Plotting TH1F: 195/372 (52.4%)Plotting TH1F: 196/372 (52.7%)Plotting TH1F: 197/372 (53.0%)Plotting TH1F: 198/372 (53.2%)Plotting TH1F: 199/372 (53.5%)Plotting TH1F: 200/372 (53.8%)Plotting TH1F: 201/372 (54.0%)Plotting TH1F: 202/372 (54.3%)Plotting TH1F: 203/372 (54.6%)Plotting TH1F: 204/372 (54.8%)Plotting TH1F: 205/372 (55.1%)Plotting TH1F: 206/372 (55.4%)Plotting TH1F: 207/372 (55.6%)Plotting TH1F: 208/372 (55.9%)Plotting TH1F: 209/372 (56.2%)Plotting TH1F: 210/372 (56.5%)Plotting TH1F: 211/372 (56.7%)Plotting TH1F: 212/372 (57.0%)Plotting TH1F: 213/372 (57.3%)Plotting TH1F: 214/372 (57.5%)Plotting TH1F: 215/372 (57.8%)Plotting TH1F: 216/372 (58.1%)Plotting TH1F: 217/372 (58.3%)Plotting TH1F: 218/372 (58.6%)Plotting TH1F: 219/372 (58.9%)Plotting TH1F: 220/372 (59.1%)Plotting TH1F: 221/372 (59.4%)Plotting TH1F: 222/372 (59.7%)Plotting TH1F: 223/372 (59.9%)Plotting TH1F: 224/372 (60.2%)Plotting TH1F: 225/372 (60.5%)Plotting TH1F: 226/372 (60.8%)Plotting TH1F: 227/372 (61.0%)Plotting TH1F: 228/372 (61.3%)Plotting TH1F: 229/372 (61.6%)Plotting TH1F: 230/372 (61.8%)Plotting TH1F: 231/372 (62.1%)Plotting TH1F: 232/372 (62.4%)Plotting TH1F: 233/372 (62.6%)Plotting TH1F: 234/372 (62.9%)Plotting TH1F: 235/372 (63.2%)Plotting TH1F: 236/372 (63.4%)Plotting TH1F: 237/372 (63.7%)Plotting TH1F: 238/372 (64.0%)Plotting TH1F: 239/372 (64.2%)Plotting TH1F: 240/372 (64.5%)Plotting TH1F: 241/372 (64.8%)Plotting TH1F: 242/372 (65.1%)Plotting TH1F: 243/372 (65.3%)Plotting TH1F: 244/372 (65.6%)Plotting TH1F: 245/372 (65.9%)Plotting TH1F: 246/372 (66.1%)Plotting TH1F: 247/372 (66.4%)Plotting TH1F: 248/372 (66.7%)Plotting TH1F: 249/372 (66.9%)Plotting TH1F: 250/372 (67.2%)Plotting TH1F: 251/372 (67.5%)Plotting TH1F: 252/372 (67.7%)Plotting TH1F: 253/372 (68.0%)Plotting TH1F: 254/372 (68.3%)Plotting TH1F: 255/372 (68.5%)Plotting TH1F: 256/372 (68.8%)Plotting TH1F: 257/372 (69.1%)Plotting TH1F: 258/372 (69.4%)Plotting TH1F: 259/372 (69.6%)Plotting TH1F: 260/372 (69.9%)Plotting TH1F: 261/372 (70.2%)Plotting TH1F: 262/372 (70.4%)Plotting TH1F: 263/372 (70.7%)Plotting TH1F: 264/372 (71.0%)Plotting TH1F: 265/372 (71.2%)Plotting TH1F: 266/372 (71.5%)Plotting TH1F: 267/372 (71.8%)Plotting TH1F: 268/372 (72.0%)Plotting TH1F: 269/372 (72.3%)Plotting TH1F: 270/372 (72.6%)Plotting TH1F: 271/372 (72.8%)Plotting TH1F: 272/372 (73.1%)Plotting TH1F: 273/372 (73.4%)Plotting TH1F: 274/372 (73.7%)Plotting TH1F: 275/372 (73.9%)Plotting TH1F: 276/372 (74.2%)Plotting TH1F: 277/372 (74.5%)Plotting TH1F: 278/372 (74.7%)Plotting TH1F: 279/372 (75.0%)Plotting TH1F: 280/372 (75.3%)Plotting TH1F: 281/372 (75.5%)Plotting TH1F: 282/372 (75.8%)Plotting TH1F: 283/372 (76.1%)Plotting TH1F: 284/372 (76.3%)Plotting TH1F: 285/372 (76.6%)Plotting TH1F: 286/372 (76.9%)Plotting TH1F: 287/372 (77.2%)Plotting TH1F: 288/372 (77.4%)Plotting TH1F: 289/372 (77.7%)Plotting TH1F: 290/372 (78.0%)Plotting TH1F: 291/372 (78.2%)Plotting TH1F: 292/372 (78.5%)Plotting TH1F: 293/372 (78.8%)Plotting TH1F: 294/372 (79.0%)Plotting TH1F: 295/372 (79.3%)Plotting TH1F: 296/372 (79.6%)Plotting TH1F: 297/372 (79.8%)Plotting TH1F: 298/372 (80.1%)Plotting TH1F: 299/372 (80.4%)Plotting TH1F: 300/372 (80.6%)Plotting TH1F: 301/372 (80.9%)Plotting TH1F: 302/372 (81.2%)Plotting TH1F: 303/372 (81.5%)Plotting TH1F: 304/372 (81.7%)Plotting TH1F: 305/372 (82.0%)Plotting TH1F: 306/372 (82.3%)Plotting TH1F: 307/372 (82.5%)Plotting TH1F: 308/372 (82.8%)Plotting TH1F: 309/372 (83.1%)Plotting TH1F: 310/372 (83.3%)Plotting TH1F: 311/372 (83.6%)Plotting TH1F: 312/372 (83.9%)Plotting TH1F: 313/372 (84.1%)Plotting TH1F: 314/372 (84.4%)Plotting TH1F: 315/372 (84.7%)Plotting TH1F: 316/372 (84.9%)Plotting TH1F: 317/372 (85.2%)Plotting TH1F: 318/372 (85.5%)Plotting TH1F: 319/372 (85.8%)Plotting TH1F: 320/372 (86.0%)Plotting TH1F: 321/372 (86.3%)Plotting TH1F: 322/372 (86.6%)Plotting TH1F: 323/372 (86.8%)Plotting TH1F: 324/372 (87.1%)Plotting TH1F: 325/372 (87.4%)Plotting TH1F: 326/372 (87.6%)Plotting TH1F: 327/372 (87.9%)Plotting TH1F: 328/372 (88.2%)Plotting TH1F: 329/372 (88.4%)Plotting TH1F: 330/372 (88.7%)Plotting TH1F: 331/372 (89.0%)Plotting TH1F: 332/372 (89.2%)Plotting TH1F: 333/372 (89.5%)Plotting TH1F: 334/372 (89.8%)Plotting TH1F: 335/372 (90.1%)Plotting TH1F: 336/372 (90.3%)Plotting TH1F: 337/372 (90.6%)Plotting TH1F: 338/372 (90.9%)Plotting TH1F: 339/372 (91.1%)Plotting TH1F: 340/372 (91.4%)Plotting TH1F: 341/372 (91.7%)Plotting TH1F: 342/372 (91.9%)Plotting TH1F: 343/372 (92.2%)Plotting TH1F: 344/372 (92.5%)Plotting TH1F: 345/372 (92.7%)Plotting TH1F: 346/372 (93.0%)Plotting TH1F: 347/372 (93.3%)Plotting TH1F: 348/372 (93.5%)Plotting TH1F: 349/372 (93.8%)Plotting TH1F: 350/372 (94.1%)Plotting TH1F: 351/372 (94.4%)Plotting TH1F: 352/372 (94.6%)Plotting TH1F: 353/372 (94.9%)Plotting TH1F: 354/372 (95.2%)Plotting TH1F: 355/372 (95.4%)Plotting TH1F: 356/372 (95.7%)Plotting TH1F: 357/372 (96.0%)Plotting TH1F: 358/372 (96.2%)Plotting TH1F: 359/372 (96.5%)Plotting TH1F: 360/372 (96.8%)Plotting TH1F: 361/372 (97.0%)Plotting TH1F: 362/372 (97.3%)Plotting TH1F: 363/372 (97.6%)Plotting TH1F: 364/372 (97.8%)Plotting TH1F: 365/372 (98.1%)Plotting TH1F: 366/372 (98.4%)Plotting TH1F: 367/372 (98.7%)Plotting TH1F: 368/372 (98.9%)Plotting TH1F: 369/372 (99.2%)Plotting TH1F: 370/372 (99.5%)Plotting TH1F: 371/372 (99.7%)Plotting TH1F: 372/372 (100.0%)
+Plotting TH2F: 1/3 (33.3%)Plotting TH2F: 2/3 (66.7%)Plotting TH2F: 3/3 (100.0%)
+trigEfficiencyDiTau_sig_TT = 25.6%
+trigEfficiencyDiTau_sig_MM = 25.6%
+trigEfficiencyDiTau_sig_LL = 30.2%
+trigEfficiencyDiTau_sig_TM = 25.6%
+trigEfficiencyDiTau_sig_TL = 25.6%
+trigEfficiencyDiTau_sig_ML = 25.6%
+trigRate_TT = 4800.0 kHz
+trigRate_MM = 5200.0 kHz
+trigRate_LL = 9200.0 kHz
+trigRate_TM = 4800.0 kHz
+trigRate_TL = 5200.0 kHz
+trigRate_ML = 6000.0 kHz
+Plotting secondary plots: 
+[2m    h_eventTriggered_recoTau_lowestPt_noCut_rate
+[0m[2m    h_eventTriggered_recoTau_lowestPt_seedEt2GeV_rate
+[0m[2m    h_eventTriggered_recoTau_lowestPt_seedEt5GeV_rate
+[0m[2m    h_eventTriggered_recoTau_lowestPt_seedEt8GeV_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_noCut_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_seedEt2GeV_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_seedEt5GeV_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_seedEt8GeV_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_seedEt15GeV_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_seedEt20GeV_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_seedEt25GeV_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_CA0p2_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_CA0p5_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_CA0p8_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_R1C0p2_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_R1C0p5_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_R1C0p8_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_R2C0p2_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_R2C0p5_rate
+[0m[2m    h_eventTriggered_recoTau_highestPt_R2C0p8_rate
+[0m[2m    h_matchedRecoTau_seedET_normRate
+[0m[2m    h_unmatchedRecoTau_seedET_normRate
+[0m[2m    h_matchedRecoTauIsolation_seedEtCore_normRate
+[0m[2m    h_unmatchedRecoTauIsolation_seedEtCore_normRate
+[0m[2m    h_matchedRecoTauIsolation_seedEtAll_normRate
+[0m[2m    h_unmatchedRecoTauIsolation_seedEtAll_normRate
+[0m[2m    h_matchedRecoTauIsolation_CA_normRate
+[0m[2m    h_unmatchedRecoTauIsolation_CA_normRate
+[0m[2m    h_matchedRecoTauIsolation_R1C_normRate
+[0m[2m    h_unmatchedRecoTauIsolation_R1C_normRate
+[0m[2m    h_matchedRecoTauIsolation_R2C_normRate
+[0m[2m    h_unmatchedRecoTauIsolation_R2C_normRate
+[0m[2m    h_matchedRecoTauIsolation_R2R1_normRate
+[0m[2m    h_unmatchedRecoTauIsolation_R2R1_normRate
+[0m[2m    h_ROC_seedET
+[0m[2m    h_ROC_seedEtCore
+[0m[2m    h_ROC_seedEtAll
+[0m[2m    h_ROC_CA
+[0m[2m    h_ROC_R1C
+[0m[2m    h_ROC_R2C
+[0m[2m    h_ROC_R2R1
+[0m[2m    h_truthTau_triggerEfficiency_noCut_pt
+[0m[2m    h_truthTau_triggerEfficiency_seedEt2GeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_seedEt5GeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_seedEt8GeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_et2GeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_et3GeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_et5GeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_CA0p2_pt
+[0m[2m    h_truthTau_triggerEfficiency_CA0p5_pt
+[0m[2m    h_truthTau_triggerEfficiency_CA0p8_pt
+[0m[2m    h_truthTau_triggerEfficiency_R1C0p2_pt
+[0m[2m    h_truthTau_triggerEfficiency_R1C0p5_pt
+[0m[2m    h_truthTau_triggerEfficiency_R1C0p8_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2C0p2_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2C0p5_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2C0p8_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2R10p5_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2R11p5_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2R19p5_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_noCut_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_seedEt2GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_seedEt5GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_seedEt8GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_seedEt15GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_seedEt20GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_seedEt25GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_et2GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_et3GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_et5GeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_CA0p2_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_CA0p5_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_CA0p8_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R1C0p2_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R1C0p5_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R1C0p8_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2C0p2_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2C0p5_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2C0p8_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2R10p5_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2R11p5_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2R19p5_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_noCut_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_seedEt2GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_seedEt5GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_seedEt8GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_seedEt15GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_seedEt20GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_seedEt25GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_et2GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_et3GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_et5GeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_CA0p2_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_CA0p5_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_CA0p8_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R1C0p2_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R1C0p5_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R1C0p8_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R2C0p2_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R2C0p5_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R2C0p8_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R2R10p5_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R2R11p5_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R2R19p5_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_noCut_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_seedEt2GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_seedEt5GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_seedEt8GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_seedEt15GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_seedEt20GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_seedEt25GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_et2GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_et3GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_et5GeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_CA0p2_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_CA0p5_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_CA0p8_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R1C0p2_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R1C0p5_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R1C0p8_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R2C0p2_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R2C0p5_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R2C0p8_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R2R10p5_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R2R11p5_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R2R19p5_pt
+[0m[2m    h_seedET_norm
+[0m[2m    h_isolation_CA_norm
+[0m[2m    h_isolation_R1C_norm
+[0m[2m    h_isolation_R2C_norm
+[0m[2m    h_isolation_R2R1_norm
+[0m[2m    h_matchedRecoTauIsolation_nNearbyClusters
+[0m[2m    h_unmatchedRecoTauIsolation_nNearbyClusters
+[0m[2m    h_ROC_cutVars
+[0m[2m    h_eventTriggered_recoTau_lowestPt_seedEtXGeV
+[0m[2m    h_eventTriggered_recoTau_highestPt_seedEtXGeV
+[0m[2m    h_eventTriggered_recoTau_highestPt_CAX
+[0m[2m    h_eventTriggered_recoTau_highestPt_R1CX
+[0m[2m    h_eventTriggered_recoTau_highestPt_R2CX
+[0m[2m    h_truthTau_triggerEfficiency_seedEtXGeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_etXGeV_pt
+[0m[2m    h_truthTau_triggerEfficiency_CAX_pt
+[0m[2m    h_truthTau_triggerEfficiency_R1CX_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2CX_pt
+[0m[2m    h_truthTau_triggerEfficiency_R2R1X_pt
+[0m[2m    h_recoTau_ptLeading_rate
+[0m[2m    h_recoTau_diTauTrigTT_ptLeading_rate
+[0m[2m    h_recoTau_diTauTrigMM_ptLeading_rate
+[0m[2m    h_recoTau_diTauTrigLL_ptLeading_rate
+[0m[2m    h_recoTau_diTauTrigTM_ptLeading_rate
+[0m[2m    h_recoTau_diTauTrigTL_ptLeading_rate
+[0m[2m    h_recoTau_diTauTrigML_ptLeading_rate
+[0m[2m    h_recoTau_ptSubleading_rate
+[0m[2m    h_recoTau_diTauTrigTT_ptSubleading_rate
+[0m[2m    h_recoTau_diTauTrigMM_ptSubleading_rate
+[0m[2m    h_recoTau_diTauTrigLL_ptSubleading_rate
+[0m[2m    h_recoTau_diTauTrigTM_ptSubleading_rate
+[0m[2m    h_recoTau_diTauTrigTL_ptSubleading_rate
+[0m[2m    h_recoTau_diTauTrigML_ptSubleading_rate
+[0m[2m    h_recoTau_2leadingPt_norm
+[0m[2m    h_recoTau_diTauTrig_TTMMLLTMTLML_ptLeading_rate
+[0m[2m    h_recoTau_diTauTrig_TTMMLLTMTLML_ptSubleading_rate
+[0m[2m    h_recoTau_diTauTrigBkgRej_TT_ptLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_MM_ptLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_LL_ptLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TM_ptLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TL_ptLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_ML_ptLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TTMMLLTMTLML_ptLeading_cumulative
+[0m[2m    h_recoTau_etaLeading_rate
+[0m[2m    h_recoTau_diTauTrigTT_etaLeading_rate
+[0m[2m    h_recoTau_diTauTrigMM_etaLeading_rate
+[0m[2m    h_recoTau_diTauTrigLL_etaLeading_rate
+[0m[2m    h_recoTau_diTauTrigTM_etaLeading_rate
+[0m[2m    h_recoTau_diTauTrigTL_etaLeading_rate
+[0m[2m    h_recoTau_diTauTrigML_etaLeading_rate
+[0m[2m    h_recoTau_diTauTrigBkgRej_TT_etaLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_MM_etaLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_LL_etaLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TM_etaLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TL_etaLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_ML_etaLeading_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TTMMLLTMTLML_etaLeading_cumulative
+[0m[2m    h_recoTau_diTauDeltaR_rate
+[0m[2m    h_recoTau_diTauTrigTT_diTauDeltaR_rate
+[0m[2m    h_recoTau_diTauTrigMM_diTauDeltaR_rate
+[0m[2m    h_recoTau_diTauTrigLL_diTauDeltaR_rate
+[0m[2m    h_recoTau_diTauTrigTM_diTauDeltaR_rate
+[0m[2m    h_recoTau_diTauTrigTL_diTauDeltaR_rate
+[0m[2m    h_recoTau_diTauTrigML_diTauDeltaR_rate
+[0m[2m    h_recoTau_diTauTrigBkgRej_TT_diTauDeltaR_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_MM_diTauDeltaR_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_LL_diTauDeltaR_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TM_diTauDeltaR_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TL_diTauDeltaR_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_ML_diTauDeltaR_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TTMMLLTMTLML_diTauDeltaR_cumulative
+[0m[2m    h_recoTau_diTauMass_rate
+[0m[2m    h_recoTau_diTauTrigTT_diTauMass_rate
+[0m[2m    h_recoTau_diTauTrigMM_diTauMass_rate
+[0m[2m    h_recoTau_diTauTrigLL_diTauMass_rate
+[0m[2m    h_recoTau_diTauTrigTM_diTauMass_rate
+[0m[2m    h_recoTau_diTauTrigTL_diTauMass_rate
+[0m[2m    h_recoTau_diTauTrigML_diTauMass_rate
+[0m[2m    h_recoTau_diTauTrigBkgRej_TT_diTauMass_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_MM_diTauMass_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_LL_diTauMass_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TM_diTauMass_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TL_diTauMass_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_ML_diTauMass_cumulative
+[0m[2m    h_recoTau_diTauTrigBkgRej_TTMMLLTMTLML_diTauMass_cumulative
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TT_ptLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_MM_ptLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_LL_ptLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TM_ptLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TL_ptLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_ML_ptLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TTMMLLTMTLML_ptLeading
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_ptLeading_norm
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_ptSubleading_norm
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TT_etaLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_MM_etaLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_LL_etaLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TM_etaLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TL_etaLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_ML_etaLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TTMMLLTMTLML_etaLeading
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_etaLeading_norm
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_etaSubleading_norm
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TT_seedEtLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_MM_seedEtLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_LL_seedEtLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TM_seedEtLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TL_seedEtLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_ML_seedEtLeading
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TTMMLLTMTLML_seedEtLeading
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_seedEtLeading_norm
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_seedEtSubleading_norm
+[0m[2m    h_matchedRecoTau_triggerEfficiency_seedEtXGeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_etXGeV_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_CAX_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R1CX_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2CX_pt
+[0m[2m    h_matchedRecoTau_triggerEfficiency_R2R1X_pt
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TT_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_MM_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_LL_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TM_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TL_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_ML_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TTMMLLTMTLML_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_diTauDeltaR
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_diTauDeltaR_norm
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TT_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_MM_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_LL_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TM_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TL_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_ML_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrigEffi_TTMMLLTMTLML_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_diTauMass
+[0m[2m    h_matchedRecoTau_diTauTrig_TTMMLLTMTLML_diTauMass_norm
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_seedEtXGeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_etXGeV_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_CAX_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R1CX_pt
+[0m[2m    h_truthMatched2RecoTau_triggerEfficiency_R2R1X_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_seedEtXGeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_etXGeV_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_CAX_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R1CX_pt
+[0m[2m    h_unmatchedRecoTau_triggerEfficiency_R2R1X_pt
+[0m[2m    h_SnB_triggered_CAX_pt_norm
+[0m[2m    h_SnB_triggered_R1CX_pt_norm
+[0m[2m    h_SnB_triggered_R2CX_pt_norm
+[0m[2m    h_SnB_triggered_R2R1X_pt_norm
+[0m[2m    h_SnB_triggerEfficiency_seedEtXGeV_pt
+[0m[2m    h_SnB_triggerEfficiency_etXGeV_pt
+[0m[2m    h_SnB_triggerEfficiency_CAX_pt
+[0m[2m    h_SnB_triggerEfficiency_R1CX_pt
+[0m[2m    h_SnB_triggerEfficiency_R2CX_pt
+[0m[2m    h_SnB_triggerEfficiency_R2R1X_pt
+[0mSig & bkg efficiencies: 
+         SigEff BkgRej
+Baseline  96.1%  34.4%
+Loose     33.0%  98.6%
+Medium    22.3%  99.5%
+Tight     22.3%  99.7%
+DEBUG: Runtime for read_ntuple: 0.03 min
+DEBUG: Runtime for RetrieveRecoEff: 0.00 min
+DEBUG: Runtime for matching: 0.01 min
+DEBUG: Runtime for plot_hists: 0.06 min
+DEBUG: Runtime for more_plots: 0.01 min
