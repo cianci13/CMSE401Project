@@ -1,10 +1,14 @@
 #!/bin/bash --login
 #SBATCH -N 1
 #SBATCH --cpus-per-task=10
-#SBATCH --time 01:00:00
+#SBATCH --time 04:00:00
 #SBATCH --mem 100G
 
 source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
 lsetup "root 6.34.04-x86_64-el9-gcc13-opt"
 cd gephistmaker
-root new_hist_maker.c
+for i in $(seq 11 20);
+do
+        export OMP_NUM_THREADS=$i
+	root new_hist_maker.c
+done

@@ -4,25 +4,26 @@ Software install (must be done pre gcc 3.15, so not the LHC)
 - Clone the repo
 - export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 - source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
-- cd build
-- acmSetup Athena,21.9,latest
-- cd ../source
-- acm add_pkg athena/Trigger/TrigL0GepPerf
-- acm compile
+- lsetup "root 6.34.04-x86_64-el9-gcc13-opt"
 
-Copying the data file:
-- cd ../run
-- cp /mnt/home/cianci13/AOD.26811025._000007.pool.root.1 ./
+Copying the data files:
+- cd gephistmaker
+- cp /mnt/home/cianci13/CMSE401Project/gephistmaker/inputTree.root
+- cp /mnt/home/cianci13/CMSE401Project/gephistmaker/inputTreeLarge.root
+
+To change between serial and parallel, exchange plot_hists.c and RetrieveRecoEff.c with their stored serial versions, and vice versa.
 
 Beyond the first install:
-- cd build
-- acmSetup
-- acm compile
+- export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+- source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+- lsetup "root 6.34.04-x86_64-el9-gcc13-opt"
 
-Then:
-- cd ../run
-- athena GepJobOptions.py
+Running (in CMSE401Project)
+- sbatch run.sb
+- sbatch scalingStudy.sb
 
-Alternatively, sbatch run.sb
+Or, cd gephistmaker and root new_hist_maker.c
+
+To view plots, after setting up root, run root --web=off and new TBrowser()
 
 
